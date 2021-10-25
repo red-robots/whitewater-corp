@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'custom-icon';
+    src: url('fonts/custom-icon.eot');
+    src: url('fonts/custom-icon.eot?#iefix') format('embedded-opentype'),
+         url('fonts/custom-icon.woff') format('woff'),
+         url('fonts/custom-icon.ttf') format('truetype'),
+         url('fonts/custom-icon.svg#custom-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+[class*='ci-']:before{
+  display: inline-block;
+  font-family: 'custom-icon';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+/*=========================================== 
+IMPORTANT: DO NOT DELETE THE COMMENT `==custom icons==`
+See `extras.php` and look for displayCustomIcons() function.
+===========================================*/
+
+/*==custom icons==*/
+.ci-backpack:before{content:'\0041';}
+.ci-board-alt:before{content:'\0042';}
+.ci-board:before{content:'\0043';}
+.ci-book:before{content:'\0044';}
+.ci-building:before{content:'\0045';}
+.ci-bus:before{content:'\0046';}
+.ci-cable:before{content:'\0047';}
+.ci-calendar-alt:before{content:'\0048';}
+.ci-calendar:before{content:'\0049';}
+.ci-camp:before{content:'\004a';}
+.ci-canopy:before{content:'\004b';}
+.ci-car:before{content:'\004c';}
+.ci-carabiner:before{content:'\004d';}
+.ci-check:before{content:'\004e';}
+.ci-church:before{content:'\004f';}
+.ci-clock:before{content:'\0050';}
+.ci-college:before{content:'\0051';}
+.ci-deep-water:before{content:'\0052';}
+.ci-eat:before{content:'\0053';}
+.ci-editor:before{content:'\0054';}
+.ci-gift-card:before{content:'\0055';}
+.ci-gift:before{content:'\0056';}
+.ci-give:before{content:'\0057';}
+.ci-help:before{content:'\0058';}
+.ci-ice-skate:before{content:'\0059';}
+.ci-info:before{content:'\005a';}
+.ci-jump:before{content:'\0061';}
+.ci-kayak:before{content:'\0062';}
+.ci-list:before{content:'\0063';}
+.ci-map:before{content:'\0064';}
+.ci-menu:before{content:'\0065';}
+.ci-military:before{content:'\0066';}
+.ci-nametag:before{content:'\0067';}
+.ci-newsletter:before{content:'\0068';}
+.ci-pass:before{content:'\0069';}
+.ci-people:before{content:'\006a';}
+.ci-pine-tree:before{content:'\006b';}
+.ci-race-flag:before{content:'\006c';}
+.ci-rafting:before{content:'\006d';}
+.ci-registration:before{content:'\006e';}
+.ci-rope:before{content:'\006f';}
+.ci-scout:before{content:'\0070';}
+.ci-silverware:before{content:'\0071';}
+.ci-smiley:before{content:'\0072';}
+.ci-sun:before{content:'\0073';}
+.ci-task:before{content:'\0074';}
+.ci-team-hat:before{content:'\0075';}
+.ci-tent:before{content:'\0076';}
+.ci-ticket:before{content:'\0077';}
+.ci-tshirt:before{content:'\0078';}
+.ci-video:before{content:'\0079';}
+.ci-wedding:before{content:'\007a';}
+.ci-yoga:before{content:'\0030';}
+.ci-zipline:before{content:'\0031';}
+/*==custom icons==*/
