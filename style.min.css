@@ -1329,7 +1329,7 @@ a:hover{color:#dd8698}
 .site{position:relative;overflow-x:hidden;overflow-y:auto}
 .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .title3{font-family:"Lato",sans-serif;font-size:18px;font-weight:400;line-height:1.2;color:#707070;margin:0 0 8px;letter-spacing:1px;text-transform:uppercase}
-.site-header{position:fixed;top:30px;left:0;width:100%;z-index:200}
+.site-header{position:fixed;top:0;left:0;width:100%;z-index:200}
 .site-header .navbar{padding-top:0;padding-bottom:0}
 .topbar{width:100%;height:30px;float:left;background:#000;position:fixed;top:0;left:0;z-index:99995}
 .topinfo{display:block;width:100%;color:#FFF;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
@@ -1863,6 +1863,8 @@ body.single-race #section-coursemap .title-w-icon{padding-bottom:0}
 body.single-race #section-registration .shead-icon{margin-bottom:10px}
 body.single-race .optional-text{width:60%;margin:20px auto;font-size:15px}
 body.page-template-page-festivals .intro-text-wrap{padding-bottom:30px}
+.intro-text-wrap.home{float:none;margin-left:auto;margin-right:auto}
+.intro-text-wrap.home:after{content:"";display:block;width:30%;height:2px;background:#ba0d30;margin:25px auto 0}
 .squiggly{width:100%;padding:0 50px;opacity:.75}
 .squiggly .line{width:100%;height:7px;background-image:url("images/squiggly.svg");background-position:right center;background-repeat:repeat-x}
 h1.page-title{font-family:"Lato",sans-serif;font-weight:400;font-size:25px;line-height:1.2;letter-spacing:2px;text-transform:uppercase;margin:0 0 25px;position:relative}
@@ -3392,6 +3394,7 @@ body.subpage.single .intro-galleries.half .rightcol{width:70%;padding-left:15px}
 #pageTabs #tabcontent:before,#pageTabs #tabcontent:after{content:"";display:block;width:30px;height:100%;position:absolute;top:0;background-image:url("images/double-arrow.svg");background-position:center;background-size:70%;background-repeat:no-repeat}
 #pageTabs #tabcontent:before{left:0;-webkit-transform:rotate(180deg);transform:rotate(180deg)}
 #pageTabs #tabcontent:after{right:0}
+.intro-text-wrap.home{max-width:70%}
 body.scrolled .site-header{-webkit-box-shadow:0 3px 8px rgba(0,0,0,0.1);box-shadow:0 3px 8px rgba(0,0,0,0.1)}
 body.scrolled .site-header .navbar{background:rgba(255,255,255,0.95)}
 .post-type-entries .postbox{width:25%}
@@ -3618,6 +3621,7 @@ body.single-festival .filter-wrapper.filterstyle .select-wrap{width:75%}
 .camp-requirements .reqText{padding:5vw 3vw}
 .sectionTwoCol .textCol .text{padding-left:5vw;padding-right:5vw}
 }@media(min-width:1200px){#banner .static-banner .slides .videoIframeDiv .playVidBtn,#banner .flexslider .slides .videoIframeDiv .playVidBtn{width:130px;height:130px}
+.intro-text-wrap.home{max-width:50%}
 #section-awards .col-content.col-count-2 .result-data{width:50%;margin-top:0}
 .team-staff-section .photo{width:25%}
 .team-staff-section .bio{width:75%}

@@ -125,7 +125,7 @@ a {
 /* Header */
 .site-header {
 	position: fixed;
-	top: 30px;
+	top: 0px;
 	left: 0;
 	width: 100%;
 	z-index: 200;
@@ -3866,7 +3866,25 @@ body.page-template-page-festivals {
 		padding-bottom: 30px;
 	}
 }
-
+.intro-text-wrap.home {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+	@include tab {
+		max-width: 70%;
+	}
+	@include desk {
+		max-width: 50%;
+	}
+	&:after {
+		content: "";
+	    display: block;
+	    width: 30%;
+	    height: 2px;
+	    background: $red;
+	    margin: 25px auto 0;
+	}
+}
 body.scrolled {
 	.site-header {
 		@include tab {
