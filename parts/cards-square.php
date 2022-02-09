@@ -40,7 +40,7 @@ $sDataSection = sanitize_title_with_dashes($sSectionTitle);
 				<div class="inside">
 					<a href="<?php echo $pagelink ?>" class="photo" target="<?php echo $target; ?>">
 						<?php if ($thumbImage) { ?>
-							<span class="imagediv" style="background-image:url('<?php echo $thumbImage['sizes']['medium_large'] ?>')"></span>
+							<span class="imagediv" style="background-image:url('<?php echo $thumbImage['sizes']['large'] ?>')"></span>
 							<img src="<?php echo $rectangle ?>" alt="" class="feat-img placeholder">
 						<?php } else { ?>
 							<span class="imagediv"></span>

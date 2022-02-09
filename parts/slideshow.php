@@ -1,10 +1,4 @@
 <?php
-if( is_front_page() ):
-	$heroImg = get_field('hero');
-?>
-<img src="<?php echo $heroImg['url']; ?>" alt="<?php echo $heroImg['alt']; ?>">
-<?php
-else:
 $post_id = get_the_ID();
 $use_parent_page = false;
 if( isset($parent_page_id) && $parent_page_id ) {
@@ -190,4 +184,4 @@ if($is_default_slide) { ?>
 	<div class="no-banner-spacer"></div>
 	<?php } ?>
 
-<?php } endif; ?>
+<?php }  ?>
