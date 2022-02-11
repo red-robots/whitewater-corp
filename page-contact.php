@@ -36,7 +36,7 @@ get_header(); ?>
 							<?php if ($contact_info) { ?>
 								<div class="address col">
 									<div class="inside">
-										<div class="wrap"><?php echo antispambot($contact_info); ?></div>
+										<div class="wrap"><?php echo anti_email_spam($contact_info); ?></div>
 									</div>
 								</div>	
 							<?php } ?>
