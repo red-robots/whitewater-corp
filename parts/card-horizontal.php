@@ -6,6 +6,12 @@ $section_icon = get_sub_field('section_icon_horiz');
 $services = get_field("groupevents_featuredservices");
 //if($services) { ?>
 <div class="group-services-wrapper">
+	<div class="wrapper titlediv">
+		<div class="shead-icon text-center">
+			<div class="icon"><span class="ci-task"></span></div>
+			<h2 class="stitle"><?php echo $section_title ?></h2>
+		</div>
+	</div>
 	<?php $i=1; 
 	if( have_rows('card_horiz') ): while( have_rows('card_horiz') ): the_row();
 	//foreach ($services as $e) { 
