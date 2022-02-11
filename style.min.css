@@ -3310,6 +3310,7 @@ ul.items .show{display:block}
 .diff-filter-wrap.show{max-width:1000px}
 #fi .select2-container.show{width:100% !important}
 .sect-div-pad{padding:30px 0}
+body.page-template-page-about ul li{width:auto;list-style-position:inside}
 @media screen and (max-device-width:1024px){.featured-events-section{background-color:#FFF}
 .featured-events-section .flexwrap{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 .featured-events-section .postbox{width:50%;float:left}

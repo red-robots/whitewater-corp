@@ -115,11 +115,9 @@ if ( $blogs->have_posts() ) {  $totalFound = $blogs->found_posts; ?>
 			<div class="wrapper">
 				
 				<div class="filter-inner">
-					<!-- <div class="filterbytxt" align="center">Filter By:</div> -->
 					<div class="flexwrap">
 
 						<?php if ( do_shortcode('[facetwp facet="activity_types"]') ) { ?>
-						<!-- <div class="select-wrap align-middle"> -->
 						<div class="select-wrap">
 							<label for="activity_type">Activity</label>
 							<?php echo do_shortcode('[facetwp facet="activity_types" pager="true"]'); ?>

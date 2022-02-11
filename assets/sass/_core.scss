@@ -13376,3 +13376,11 @@ ul.items {
 .sect-div-pad {
 	padding: 30px 0;
 }
+body.page-template-page-about {
+	ul {
+		li {
+			width: auto;
+			list-style-position: inside;
+		}
+	}
+}
