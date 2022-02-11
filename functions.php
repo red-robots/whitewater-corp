@@ -37,6 +37,10 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/extras.php';
 
+require get_template_directory() . '/inc/anti-email-spam.php';
+
+require get_template_directory() . '/inc/category-description.php';
+
 /**
  * Post Pagination
  */
