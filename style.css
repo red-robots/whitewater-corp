@@ -6065,7 +6065,7 @@ body.single-instructions #primary #section-faqs { padding-top: 60px; padding-bot
 
 .section-contact-details .contact-form { margin-top: 0 !important; }
 
-.section-contact-details .contact-form .gform_wrapper input[type="text"], .section-contact-details .contact-form .gform_wrapper input[type="email"], .section-contact-details .contact-form .gform_wrapper textarea { border-radius: 0px; border: 1px solid #FFF; background-color: #FFF; padding: 6px 10px !important; font-size: 14px; line-height: 1.2; }
+.section-contact-details .contact-form .gform_wrapper input[type="text"], .section-contact-details .contact-form .gform_wrapper input[type="email"], .section-contact-details .contact-form .gform_wrapper textarea { border-radius: 0px; border: 1px solid #000; background-color: #FFF; padding: 6px 10px !important; font-size: 14px; line-height: 1.2; }
 
 .section-contact-details .contact-form .gform_wrapper input[type="text"]:focus, .section-contact-details .contact-form .gform_wrapper input[type="email"]:focus, .section-contact-details .contact-form .gform_wrapper textarea:focus { border: 1px solid #000; outline: none; }
 
