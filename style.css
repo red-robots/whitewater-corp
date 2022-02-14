@@ -4318,7 +4318,7 @@ body.nav-open .menu-toggle { opacity: 0; }
 
 #banner.video-playing { z-index: 300; }
 
-@media (min-width: 820px) { #banner { margin-top: 90px; } }
+@media (min-width: 820px) { #banner { margin-top: 64px; } }
 
 #banner .static-banner, #banner .flexslider { border-radius: 0px; }
 

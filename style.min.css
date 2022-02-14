@@ -3342,7 +3342,7 @@ body.search .has-image .text-col{width:67%;float:right;padding-left:30px;display
 }@media(min-width:820px){.topinfo{display:inline-block;float:right;width:auto}
 .topinfo span.daily-schedule{display:inline-block}
 .navbar{-webkit-box-shadow:none;box-shadow:none}
-#banner{margin-top:90px}
+#banner{margin-top:64px}
 #banner .static-banner .slides img.image-size-ref-helper,#banner .flexslider .slides img.image-size-ref-helper{display:block}
 #banner .static-banner .slides img.image-helper-mobile,#banner .flexslider .slides img.image-helper-mobile{display:none}
 #banner .slideCaption .text{font-size:40px}
