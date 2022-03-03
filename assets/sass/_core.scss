@@ -6134,7 +6134,12 @@ body.single-instructions {
 			}
 		}
 	}
-	.facetwp-facet {
+	.facetwp-dropdown-man {
+		border-radius: 0;
+		height: 37px;
+		border: 1px solid $gray_dark;
+	}
+	.facetwp-facet, .facetwp-facet-man  {
 		margin-bottom: 0;
 		.fs-wrap {
 			width: 70%;
@@ -9678,8 +9683,20 @@ body.logged-in.admin-bar {
 			}
 		}
 	}
+	.flexwrapfilters {
+		width: 100%;;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		@media screen and (min-width: $tabwidth) {
+			flex-direction: row;
+		}
+		.filter-label {
+			width: auto;
+		}
+	}
 }
-
 .employment-page {
 	.filter-wrapper {
 		padding-bottom: 0;
@@ -11056,7 +11073,7 @@ body.page-template-page-group-events {
 	}
 	.filter-label {
 		@media screen and (max-width: $tabwidth) {
-			width: 20% !important;
+			// width: 20% ;
 			padding-left: 0 !important;
 			padding-right: 0 !important;
 			float: left !important;

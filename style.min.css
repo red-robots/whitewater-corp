@@ -2196,12 +2196,13 @@ body.single-instructions #primary #section-faqs{padding-top:60px;padding-bottom:
 .filter-wrapper .select-wrap label{display:block;width:30%;height:37px;float:left;position:relative;top:0;left:0;background:#707070;color:#FFF;font-size:3.5vw;line-height:1.2;text-align:center;text-transform:uppercase;padding:11px 15px 7px}
 .filter-wrapper .select-wrap .selectdiv{width:70%;float:left}
 .filter-wrapper .select-wrap .selectdiv select{width:100%;height:37px;border:0;padding:0 10px;background:transparent}
-.filter-wrapper .facetwp-facet{margin-bottom:0}
-.filter-wrapper .facetwp-facet .fs-wrap{width:70%;height:37px;position:relative}
-.filter-wrapper .facetwp-facet.facetwp-type-fselect .fs-dropdown{width:100% !important}
-.filter-wrapper .facetwp-facet .fs-label-wrap{height:100%;border:1px solid #707070;background:transparent}
-.filter-wrapper .facetwp-facet .fs-label{padding:12px 22px 10px 8px}
-.filter-wrapper .facetwp-facet .fs-arrow{top:2px;right:10px;border-top:5px solid #707070}
+.filter-wrapper .facetwp-dropdown-man{border-radius:0;height:37px;border:1px solid #707070}
+.filter-wrapper .facetwp-facet,.filter-wrapper .facetwp-facet-man{margin-bottom:0}
+.filter-wrapper .facetwp-facet .fs-wrap,.filter-wrapper .facetwp-facet-man .fs-wrap{width:70%;height:37px;position:relative}
+.filter-wrapper .facetwp-facet.facetwp-type-fselect .fs-dropdown,.filter-wrapper .facetwp-facet-man.facetwp-type-fselect .fs-dropdown{width:100% !important}
+.filter-wrapper .facetwp-facet .fs-label-wrap,.filter-wrapper .facetwp-facet-man .fs-label-wrap{height:100%;border:1px solid #707070;background:transparent}
+.filter-wrapper .facetwp-facet .fs-label,.filter-wrapper .facetwp-facet-man .fs-label{padding:12px 22px 10px 8px}
+.filter-wrapper .facetwp-facet .fs-arrow,.filter-wrapper .facetwp-facet-man .fs-arrow{top:2px;right:10px;border-top:5px solid #707070}
 .filter-wrapper.optionsnum2 .select-wrap label{font-size:13px;padding:0 10px;margin:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .filter-wrapper.optionsnum3 .select-wrap label{font-size:13px;padding:0 10px;margin:0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .filter-wrapper .select-reset-wrap{position:relative;left:6px;top:-3px}
@@ -2735,6 +2736,8 @@ body.logged-in.admin-bar .job-info-page .text-centered-section{margin-top:-5px}
 .filter-wrapper.filterstyle .filter-label span{display:block;width:100%;text-align:center;padding:0 20px}
 .filter-wrapper.filterstyle .filter-label .resetLink{display:block;color:#FFF;text-decoration:none;font-size:12px;line-height:1.1}
 .filter-wrapper.filterstyle .select-wrap{width:26.5%}
+.filter-wrapper.filterstyle .flexwrapfilters{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.filter-wrapper.filterstyle .flexwrapfilters .filter-label{width:auto}
 .employment-page .filter-wrapper{padding-bottom:0;margin-bottom:30px}
 .employment-page .filter-message{width:100%;float:left}
 .employment-page .filter-message #fm{font-size:15px;margin-bottom:15px}
@@ -3600,7 +3603,8 @@ body.single-festival .filter-wrapper.filterstyle .select-wrap{width:75%}
 .site-footer #copyright .col-left{width:40%}
 .site-footer #copyright .col-right{width:60%}
 .modal.customModal .modal-body{padding:0 5vw 3vw}
-}@media screen and (min-width:820px){.double-filter-wrapper .inside{width:45%;float:left;padding:2.5%}
+}@media screen and (min-width:820px){.filter-wrapper.filterstyle .flexwrapfilters{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+.double-filter-wrapper .inside{width:45%;float:left;padding:2.5%}
 .double-filter-wrapper .filter-wrapper .select,.double-filter-wrapper .filter-wrapper .select-wrap.align-middle{width:100%}
 }@media(min-width:960px){.topinfo span.el{font-size:12px}
 #banner.taxonomy-banner .static-banner{height:650px}
@@ -3675,7 +3679,7 @@ body.single-festival .filter-wrapper.filterstyle .select-wrap{width:75%}
 .single-fieldtrips#primary .post-type-entries .postbox.has-custom-width{width:100% !important}
 .custom-select-wrap2 .select-wrap.custom-select-wrap{float:left !important;max-width:80% !important;width:80% !important;left:0 !important;padding-left:0 !important;padding-right:0 !important}
 .custom-select-wrap2 .select-wrap.custom-select-wrap .select2-container.select2-container--default,.custom-select-wrap2 .select-wrap.custom-select-wrap .select2-dropdown.select2-dropdown--below{width:100% !important}
-.custom-select-wrap2 .filter-label{width:20% !important;padding-left:0 !important;padding-right:0 !important;float:left !important}
+.custom-select-wrap2 .filter-label{padding-left:0 !important;padding-right:0 !important;float:left !important}
 .custom-select-wrap2 .filter-label span{padding-left:0 !important;padding-right:0 !important;font-size:3.2vw}
 .jobs.resetBtn{float:none}
 .festival.resetBtn{position:absolute;left:0;top:44px;text-align:left}

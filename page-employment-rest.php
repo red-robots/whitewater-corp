@@ -10,6 +10,16 @@ $banner = get_field("flexslider_banner");
 $has_banner = ($banner) ? 'hasbanner':'nobanner';
 $currentPageLink = get_permalink();
 $defaultLocation = get_default_job_location();
+
+$response = wp_remote_get( 'https://whitewater.org/wp-json/wp/v2/pages/332' );
+
+        if( is_array($response) ) :
+            $code = wp_remote_retrieve_response_code( $response );
+            if(!empty($code) && intval(substr($code,0,1))===2): 
+                $body = json_decode(wp_remote_retrieve_body( $response),true);
+
+
+endif;endif;
 ?>
 
 <div id="primary" data-post="<?php echo get_the_ID()?>" class="content-area-full employment-page <?php echo $has_banner ?>">
@@ -19,7 +29,14 @@ $defaultLocation = get_default_job_location();
 				<div class="intro-text-wrap">
 					<div class="wrapper">
 						<h1 class="page-title"><span><?php the_title(); ?></span></h1>
-						<div class="intro-text"><?php the_content(); ?></div>
+						<div class="intro-text">
+							<?php 
+							echo $body['content']['rendered'];
+							// echo '<pre style="background-color: #fff;">';
+							// print_r($body);
+							// echo '<?pre>';
+						//the_content(); 
+						?></div>
 					</div>
 				</div>
 			<?php } ?>

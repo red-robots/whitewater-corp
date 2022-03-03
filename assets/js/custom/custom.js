@@ -880,5 +880,161 @@ Reference: http://jsfiddle.net/BB3JK/47/
   });
 
 
+	  Isotope.Item.prototype._create = function() {
+  // assign id, used for original-order sorting
+  this.id = this.layout.itemGUID++;
+  // transition objects
+  this._transn = {
+    ingProperties: {},
+    clean: {},
+    onEnd: {}
+  };
+  this.sortData = {};
+};
+
+Isotope.Item.prototype.layoutPosition = function() {
+  this.emitEvent( 'layout', [ this ] );
+};
+
+Isotope.prototype.arrange = function( opts ) {
+  // set any options pass
+  this.option( opts );
+  this._getIsInstant();
+  // just filter
+  this.filteredItems = this._filter( this.items );
+  // flag for initalized
+  this._isLayoutInited = true;
+};
+
+// layout mode that does not position items
+Isotope.LayoutMode.create('none');
+
+
+// --------------- //
+
+// init Isotope
+var $grid = $('.employment-grid').isotope({
+  itemSelector: '.joblist',
+  layoutMode: 'none'
+});
+// filter functions
+
+// bind filter button click
+$('.filters-select').on( 'change', function() {
+  // get filter value from option value
+  var filterValue = this.value;
+  // use filterFn if matches value
+  filterValue = filterValue;
+  $grid.isotope({ filter: filterValue });
+});
+// change is-checked class on buttons
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
+});
+
+
+// $('.button-group').each( function( i, buttonGroup ) {
+//   var $buttonGroup = $( buttonGroup );
+//   $buttonGroup.on( 'click', 'button', function() {
+//     $buttonGroup.find('.is-checked').removeClass('is-checked');
+//     $( this ).addClass('is-checked');
+//   });
+// });
+// $('.filters-select-dept').each( function( i, buttonGroup ) {
+//   var $buttonGroup = $( buttonGroup );
+//   $buttonGroup.on( 'change', function() {
+//     $('.job-group').find('.show-dept').removeClass('show-dept');
+//     // $( this ).addClass('is-checked');
+//     $('.job-group').find(filterValue).addClass('show-dept');
+//   });
+// });
+
+$('.filters-select-dept').on( 'change', function() {
+	// get filter value from option value
+  var filterValue = this.value;
+	// alert(filterValue);
+// $('.job-group').not(filterValue).each(function(){
+// 	$('.job-group').removeClass('show-dept');
+// });
+  // $('.job-group').addClass('.poofs');
+  // use filterFn if matches values
+  // filterValue = filterValue;
+  // $grid.isotope({ filter: filterValue });
+  // $('.job-group').not('.'+filterValue).removeClass('show-dept');
+  
+  $('.job-group').removeClass('show-dept');
+  $('.'+filterValue).addClass('show-dept');
+  setTimeout(function() {
+  	// alert('layout');
+        $grid.isotope('layout');
+    }, 1000);
+  // $grid.isotope('layout');
+  // setTimeout( function() {
+  //   $grid.isotope('layout');
+  // }, 1000 );
+   // iso.reloadItems()
+  
+
+
+});
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    	$grid.isotope({ filter: filterValue });
+
+  });
+});
+
+		
+
+		  // var elems = $grid.isotope('getFilteredItemElements'); 
+		  // if ( !elems.length ) { 
+		  	
+		  // 	$('.message-div').show(); 
+		  // } else { 
+		  	
+		  // 	$('.message-div').hide(); 
+		  // }
+
+		  // $grid.on( 'arrangeComplete', function( event, filteredItems ) {   
+		  // if( filteredItems.length > 0 ) {
+		  // 	alert('no restules');
+		  // } else {
+		  // 	alert('kaldsjf');
+		  // }// hide message else // show message; });
+		  
+		// flatten object by concatting values
+		function concatValues( obj ) {
+		  var value = '';
+		  for ( var prop in obj ) {
+		    value += obj[ prop ];
+		  }
+		  return value;
+		}
+
+		//$grid.isotope({ filter: '.moonfilters' });
+
+		  // if ( !$grid.data('isotope').$filteredAtoms.length ) {
+		  //   $('.message-div').fadeIn('slow');
+		  // } else {
+		  //   $('.message-div').fadeOut('fast');
+		  // }
+
+		  $grid.on( 'arrangeComplete', function( event, filteredItems ) {
+	        var resultCount = filteredItems.length;
+	        if(resultCount == 0) {
+	            //$grid.html("Sorry.No result for these two choices. Please select anothter category.");
+	           // alert('none');
+	           $('.message-div').removeClass('noshow');
+	           $('.message-div').addClass('show');
+	        } else {
+	        	$('.message-div').addClass('noshow');
+	           $('.message-div').removeClass('show');
+	        }
+    });
 
 });// END #####################################    END
