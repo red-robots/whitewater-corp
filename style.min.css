@@ -1428,6 +1428,7 @@ body.scrolled .navbar{background:rgba(255,255,255,0.95)}
 .menu-toggle span.bar:before,.menu-toggle span.bar:after{content:"";display:block;width:100%;top:0;left:0}
 .menu-toggle span.bar:before{top:-8px}
 .menu-toggle span.bar:after{top:8px}
+.home-square-cards{padding-bottom:40px}
 body.nav-open{overflow:hidden}
 body.nav-open #overlay{display:block;-webkit-animation-name:fadeIn;animation-name:fadeIn}
 body.nav-open .menu-toggle{opacity:0}

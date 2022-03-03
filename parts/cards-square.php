@@ -5,7 +5,7 @@ $sSectionTitle = get_sub_field('section_title_sq');
 $sSectionIcon = get_sub_field('section_icon_sq');
 $sDataSection = sanitize_title_with_dashes($sSectionTitle);
  ?>
-<section id="classes" data-section="<?php echo $sDataSection; ?>" class="section-content section-classes post-type-entries <?php echo $wrapClass ?>">
+<section id="classes" data-section="<?php echo $sDataSection; ?>" class="home-square-cards section-content section-classes post-type-entries <?php echo $wrapClass ?>">
 	<div class="wrapper titlediv">
 		<div class="shead-icon text-center">
 			<div class="icon"><span class="ci-task"></span></div>
