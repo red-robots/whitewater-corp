@@ -111,11 +111,14 @@ endif;endif;
 			<?php } ?>
 
 			<?php
+			$showHide = get_field("show_hide");
 			$left_image = get_field("left_image");
 			$left_text = get_field("left_text");
 			$jobfairTypes = get_field("jobfair_types");
 			$jobfairTitle = get_field("jobfair_types_title");
 			$showFaqs = get_field("faqs_visibility");
+
+			if( $showHide == 'show' ) :
 			$s3 = ( ($left_image || $left_text) &&  $jobfairTypes ) ? 'half':'full';
 			if( ($jobfairTitle || $jobfairTypes) || ($left_image || $left_text) ) { ?>
 			<section id="section3" data-section="<?php echo $jobfairTitle ?>" class="section-content section-jobfair <?php echo $s3 ?>">
@@ -203,7 +206,7 @@ endif;endif;
 				</div>
 			</section>
 			<?php } ?>
-
+			<?php endif; ?>
 
 		<?php //get_template_part("parts/content-employee-stories") ?>
 
