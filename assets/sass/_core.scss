@@ -807,7 +807,8 @@ body.nav-open {
 	&.video-playing {
 		z-index: 300;
 	}
-	margin-top: 85px;
+	// margin-top: 85px;
+	margin-top: 65px;
 	@include tab {
 		margin-top: 64px;;
 	}
@@ -13244,7 +13245,8 @@ body.logged-in.admin-bar {
 			top: 46px;
 		}
 		.site-header {
-			top: 75px;
+			// top: 75px;
+			top: 50px;
 		}
 		.closeNav {
 			top: 65px;
