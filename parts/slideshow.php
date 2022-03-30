@@ -40,7 +40,11 @@ if($is_default_slide) { ?>
 	$slide_class = ($slidesCount>1) ? 'flexslider':'static-banner';
 	?>
 
-	<?php if ( $flexslider ) { ?>
+	<?php if ( $flexslider ) { 
+			// echo '<pre>';
+			// print_r($flexslider);
+			// echo '</pre>';
+		?>
 	<div id="banner">
 		<div class="slides-wrapper <?php echo $slide_class ?>">
 			<?php if ($is_subpage && $top_notification) { ?>
@@ -52,6 +56,9 @@ if($is_default_slide) { ?>
 			<?php } ?>
 			<ul class="slides <?php echo $numSlides ?>">
 				<?php $i=0; foreach ($flexslider as $row) { 
+					// echo '<pre style="background: #fff;">';
+					// print_r($row);
+					// echo '</pre>';
 					$is_video = ( isset($row['video']) && $row['video'] ) ? $row['video'] : '';
 					$slideType = ($is_video) ? 'type-video':'type-image';
 					$featuredType = ( isset($row['video_or_image']) && $row['video_or_image'] ) ? $row['video_or_image'] : ''; ?>

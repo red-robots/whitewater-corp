@@ -810,7 +810,7 @@ body.nav-open {
 	// margin-top: 85px;
 	margin-top: 65px;
 	@include tab {
-		margin-top: 64px;;
+		margin-top: 64px;
 	}
 	.static-banner,
 	.flexslider {
@@ -819,6 +819,26 @@ body.nav-open {
 			.iframe-wrapper {
 				padding: 0 0;
 				position: relative;
+				width: 100%;
+				video {
+					width: 100%;
+				}
+				&.yes-mobile {
+					
+					.desktop {
+						display: none;
+						@include tab {
+							display: block;
+						}
+					}
+					.mobile {
+						display: block;
+						@include tab {
+							display: none;
+						}
+					}
+					
+				}
 			}
 			img.image-size-ref {
 				visibility: hidden;

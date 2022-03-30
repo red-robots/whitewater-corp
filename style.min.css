@@ -1435,7 +1435,10 @@ body.nav-open .menu-toggle{opacity:0}
 #banner{width:100%;float:left;position:relative;background-color:#000;margin-top:65px}
 #banner.video-playing{z-index:300}
 #banner .static-banner,#banner .flexslider{border-radius:0}
-#banner .static-banner .slides .iframe-wrapper,#banner .flexslider .slides .iframe-wrapper{padding:0;position:relative}
+#banner .static-banner .slides .iframe-wrapper,#banner .flexslider .slides .iframe-wrapper{padding:0;position:relative;width:100%}
+#banner .static-banner .slides .iframe-wrapper video,#banner .flexslider .slides .iframe-wrapper video{width:100%}
+#banner .static-banner .slides .iframe-wrapper.yes-mobile .desktop,#banner .flexslider .slides .iframe-wrapper.yes-mobile .desktop{display:none}
+#banner .static-banner .slides .iframe-wrapper.yes-mobile .mobile,#banner .flexslider .slides .iframe-wrapper.yes-mobile .mobile{display:block}
 #banner .static-banner .slides img.image-size-ref,#banner .flexslider .slides img.image-size-ref{visibility:hidden}
 #banner .static-banner .slides img.image-size-ref-helper,#banner .flexslider .slides img.image-size-ref-helper{display:none;width:100%;height:auto;float:left;visibility:hidden}
 #banner .static-banner .slides img.image-helper-mobile,#banner .flexslider .slides img.image-helper-mobile{display:block;width:100%;height:auto;float:left;visibility:hidden}
@@ -3347,6 +3350,8 @@ body.search .has-image .text-col{width:67%;float:right;padding-left:30px;display
 .topinfo span.daily-schedule{display:inline-block}
 .navbar{-webkit-box-shadow:none;box-shadow:none}
 #banner{margin-top:64px}
+#banner .static-banner .slides .iframe-wrapper.yes-mobile .desktop,#banner .flexslider .slides .iframe-wrapper.yes-mobile .desktop{display:block}
+#banner .static-banner .slides .iframe-wrapper.yes-mobile .mobile,#banner .flexslider .slides .iframe-wrapper.yes-mobile .mobile{display:none}
 #banner .static-banner .slides img.image-size-ref-helper,#banner .flexslider .slides img.image-size-ref-helper{display:block}
 #banner .static-banner .slides img.image-helper-mobile,#banner .flexslider .slides img.image-helper-mobile{display:none}
 #banner .slideCaption .text{font-size:40px}
