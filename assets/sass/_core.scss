@@ -13426,3 +13426,11 @@ body.page-template-page-about {
 		}
 	}
 }
+.gform_wrapper #gform_4 ul.gfield_radio li {
+	position: relative;
+}
+.gform_wrapper #gform_4 ul.gfield_radio li label {
+	position: absolute;
+	top: 3px;
+	left: 16px;
+}
