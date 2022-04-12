@@ -13434,3 +13434,554 @@ body.page-template-page-about {
 	top: 3px;
 	left: 16px;
 }
+#timeline-area {
+	// background-color: $red;
+	color: #FFF;
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	&:before {
+		content:"";
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		// background-color: #022b46;
+    opacity: 0.9;
+		z-index: 3;
+	}
+	@include tab {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	.imagebg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		filter:grayscale(1);
+	}
+	.wrapper {
+		z-index: 10;
+	}
+	.col-title {
+		text-align: center;
+		position: relative;
+		z-index: 15;
+	}
+	.horizontal-timeline {
+		.events-wrapper {
+			max-width: 92%;
+			height: 100px;
+			margin: 0 auto;
+			@include mid {
+				max-width: 80%;
+			}
+			@include desk {
+				max-width: 1000px;
+			}
+		}
+		.events {
+			bottom: 80px;
+			height: 2px;
+			margin-left: 10px;
+			background: $red;
+		}
+		.filling-line {
+			background-color: $red;
+		}
+		.events a:before,
+		.events a:after {
+			transition: all ease .3s;
+		}
+		.events a.selected::after  {
+			background-color: $red;
+		}
+		.events a.older-event::after {
+			background: $red;
+		}
+		.events a:after {
+			width: 25px;
+			height: 25px;
+			bottom: -11px;
+			left: 30%;
+			border: 1px solid $red;
+			background: $red;
+		}
+		.events a.selected:before {
+			color: #FFF!important;
+			transform: scale(1.2)!important;
+		}
+		.events a.first {
+			left: -15px!important;
+		}
+		.timeline {
+			max-width: 80%;
+			width: 100%;
+			@include mid {
+				max-width: 80%;
+			}
+			@include desk {
+				max-width: 1100px;
+			}
+			.events-wrapper {
+				a {
+					color: transparent;
+					&:before {
+						content:attr(data-label);
+						display: inline-block;
+						font-size: 16px;
+						line-height: 1;
+						position: absolute;
+						bottom: -50px;
+						color: $red;
+					}
+				}
+			}
+			.scroll-left,
+			.scroll-right {
+				display: none;
+			}
+			a.prev, a.next {
+				display: inline-block;
+				width: 35px;
+				height: 35px;
+				border: 1px solid $red;
+				border-radius: 100%;
+				position: absolute;
+				top: -44px;
+				background-color: $red;
+				@include mid {
+					top: -53px;
+				}
+				&:before, &:after  {
+					content:"";
+					display: block;
+					width: 15px;
+					height: 2px;
+					background: $red;
+					position: absolute;
+					top: 14px;
+					left: 8px;
+				}
+				&:hover {
+					background-color: $red;
+				}
+			}
+			a.prev {
+				left: -30px;
+				&:before {
+					transform: translateY(6px) rotate(40deg);
+				}
+				&:after {
+					transform: translateY(-3px) rotate(-40deg);
+				}
+			}
+			a.next {
+				&:before, &:after {
+					left: 10px;
+				}
+				&:before {
+					transform: translateY(6px) rotate(-40deg);
+				}
+				&:after {
+					transform: translateY(-3px) rotate(40deg);
+				}
+			}
+		}
+
+		.events-content {
+			height: auto!important;
+			width: 100%;
+			margin-top: 0;
+			@include desk {
+				margin-top: 10px;
+			}
+			a[data-horizontal-timeline] {
+				display: none;
+			}
+			.history-data {
+				display: none;
+				&.selected {
+					display: block;
+				}
+				.text {
+					font-size: 16px;
+				}
+			}
+			li {
+				background-color: transparent;
+			}
+		}
+
+	}
+
+	.timeline-content {
+		margin-top: 80px;
+	}
+
+	
+	.timeline-navigation {
+		a {
+			position: absolute;
+			top: -60px;
+		}
+	}
+
+	
+	.timeline-navigation {
+		z-index: 50;
+	}
+	.history-data {
+		.info {
+			max-width: 900px;
+			width: 100%;
+			margin: 0 auto;
+			min-height: 300px;
+			@include desk {
+				min-height: 450px;
+			}
+		}
+	}
+	.photo {
+		margin-top: 30px;
+		img {
+			max-width: 350px;
+			width: 100%;
+			height: auto;
+		}
+	}
+	
+}
+#timeline-area.timeline-wrapper {
+	width: 100%;
+	float: left;
+	padding-top: 0;
+	padding-bottom: 0;
+	&:before {
+		display: none;
+	}
+	.imagebg {
+		opacity: 0.5;
+	}
+	.timeline-large-title {
+		width: 100%;
+		float: left;
+		position: relative;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		background-color: #818283;
+		&:before {
+			content: "";
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			// background-color: #012842;
+			opacity: 0.8;
+			z-index: 3;
+		}
+		@include tab {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+	}
+}
+#timeline-area.timeline-wrapper .timeline {
+	width: 100%;
+	float: left;
+	background: $gray;
+	position: relative;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	@include tab {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	.timeline-inner {
+		width: 100%;
+		float: left;
+		position: relative;
+		@include flexgroup();
+		@include flexbox-align-items(flex-start);
+		@include flexbox-justify(flex-start);
+	}
+	.inner-pad {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	.history {
+		width: 100%;
+	    position: relative;
+	    z-index: 15;
+	    color: #000;
+	    margin-bottom: 0;
+	    z-index: 100;
+    @include tab {
+    	width: 50%;
+    	margin-bottom: 0;
+      	min-height: 150px;
+      &.hasimage {
+        min-height: 250px;
+      }
+    }
+    .h-title {
+    	font-family: $font_secondary;
+			font-size: 35px;
+			font-weight: 400;
+			line-height: 1;
+			color: #565554;
+			margin-bottom: 10px;
+    }
+    .h-text {
+			width: 100%;
+			float: left;
+			position: relative;
+			font-size: 15px;
+			line-height: 1.5;
+			padding-bottom: 20px;
+	    @include tab {
+				border-top: 4px dotted #8C8C8C;
+				padding-top: 10px;
+	    }
+	    .text, .photo {
+    		float: left;
+    		width: 100%;
+    	}
+    	.photo {
+    		transition: all ease .3s;
+    		@include tab {
+          right: 0;
+    			transform: translateY(-65px);
+    		}
+    		.pic {
+    			display: block;
+    			text-decoration: none;
+    			width: 100%;
+    			float: left;
+    			position: relative;
+    			@include backgroundImage(top center);
+    			background-color: #CCC;
+    			transition: all ease .3s;
+    			img {
+    				width: 100%;
+    				height: auto;
+    				float: left;
+    			}
+    			img.helper {
+    				display: block;
+    			}
+    			img.actual-image {
+    				display: none;
+    			}
+    		}
+    		&:hover {
+  				.pic {
+  					transform: scale(1.1);
+  				}
+  			}
+    	}
+	    &.half {
+	    	.text {
+	    		width: 100%;
+	    		@include tab {
+	    			width: 60%;
+	    			padding-right: 20px;
+	    		}
+	    	}
+	    	.photo {
+	    		width: 100%;
+	    		margin-top: 30px;
+	    		border-radius: 10px;
+	    		overflow: hidden;
+	    		box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+	    		@include tab {
+	    			margin-top: 0;
+	    			width: 35%;
+            position: absolute;
+            top: 0;
+	    		}
+	    		img {
+	    			width: 100%;
+	    			height: auto;
+	    			float: left;
+	    		}
+	    	}
+	    }
+		}
+    // &.hasimage {
+    //   margin-bottom: 50px;
+    // }
+	}
+	.history.odd {
+		.h-text {
+			@include tab {
+				padding-right: 3vw;
+				&:before {
+					content: "";
+					display: block;
+					width: 15px;
+					height: 30px;
+					background: $red;
+					// border-radius: 100px;
+					border-top-left-radius: 100px;
+					border-bottom-left-radius: 100px;
+					position: absolute;
+					top: -17px;
+					right: 2px;
+				}
+			}
+		}
+    .photo {
+      @include tab {
+        right: 40px;
+      }
+    }
+		.h-title {
+			@include tab {
+				padding-right: 3vw;
+			}
+		}
+	}
+	.history.even {
+		margin-top: 0;
+		@include tab {
+			padding-top: 0;
+			margin-top: 2%;
+			left: -2px;
+      transform: translateY(5vw);
+		}
+		.h-text {
+			@include tab {
+				padding-left: 3vw;
+				&:before {
+					content: "";
+					display: block;
+					width: 15px;
+					height: 30px;
+					background: $red;
+					// border-radius: 100px;
+					border-top-right-radius: 100px;
+					border-bottom-right-radius: 100px;
+					position: absolute;
+					top: -17px;
+					left: 2px;
+				}
+			}
+		}
+		.h-title {
+			@include tab {
+				padding-left: 3vw;
+			}
+		}
+	}
+	.history.first {
+		@include tab {
+      transform: translateY(0)!important;
+			padding-top: 50px;
+		}
+	}
+	.history.last {
+		@include tab {
+			padding-bottom: 50px;
+      .h-text {
+        margin-bottom: 70px;
+      }
+		}
+	}
+  .history.moveup {
+    @include tab {
+      transform: translateY(-5vw);
+    }
+  }
+	.middle-line {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		border-right: 2px solid $red;
+		@include tab {
+			width: 50%;
+			&:before {
+				content: "";
+				display: block;
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+				background-color: $red;
+				// border-bottom: 2px solid $red;
+				position: absolute;
+				top: -10px;
+				right: -12.5px;
+				// margin-right: -3.5vw;
+				// margin-top: -1.2vw;
+			}
+			&:after {
+				content: "";
+				display: block;
+				width: 7vw;
+				border-bottom: 2px solid $red;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				margin-right: -3.5vw;
+				margin-bottom: -1.2vw;
+			}
+		}
+	}
+	@include max( $tabwidth - 1px ) {
+		.history {
+      height: auto!important;
+			padding-bottom: 50px;
+			&.first {
+				padding-top: 30px;
+			}
+			.h-title {
+				position: relative;
+				padding-bottom: 5px;
+				border-bottom: 2px solid $gray;
+				&:before {
+					content: "";
+					display: block;
+					width: 15px;
+					height: 30px;
+					background: $gray;
+					border-top-right-radius: 100px;
+					border-bottom-right-radius: 100px;
+					position: absolute;
+					bottom: -15px;
+					left: 2px;
+				}
+			}
+			.h-title,
+			.h-text {
+				padding-left: 40px;
+			}
+			.photo {
+				width: auto!important;
+				.pic {
+					display: inline-block!important;
+					width: auto;
+					background-image:none!important;
+					img.helper {
+						display: none!important;
+					}
+					img.actual-image {
+						display: block!important;
+					}
+				}
+			}
+		}
+	}
+}
+.clear {
+	clear: both;
+}

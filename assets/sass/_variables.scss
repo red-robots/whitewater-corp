@@ -36,7 +36,9 @@ $nav_width: 350px;
 @mixin mid { @media (min-width: $midwidth) { @content; } }
 @mixin desk {  @media (min-width: $deskwidth) { @content; } }
 @mixin xxl {  @media (min-width: $xxl) { @content; } }
-
+@mixin max($width) {
+	@media screen and (max-width: $width) { @content; }
+}
 // Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
 	font-size: ($sizeValue * 16) * 1px;
