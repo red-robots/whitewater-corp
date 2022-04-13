@@ -3324,7 +3324,7 @@ body.page-template-page-about ul li{width:auto;list-style-position:inside}
 #timeline-area:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;opacity:.9;z-index:3}
 #timeline-area .imagebg{width:100%;height:100%;position:absolute;top:0;left:0;background-size:cover;background-position:center;background-repeat:no-repeat;-webkit-filter:grayscale(1);filter:grayscale(1)}
 #timeline-area .wrapper{z-index:10}
-#timeline-area .col-title{text-align:center;position:relative;z-index:15}
+#timeline-area .col-title{text-align:center;position:relative;z-index:15;font-size:40px}
 #timeline-area .horizontal-timeline .events-wrapper{max-width:92%;height:100px;margin:0 auto}
 #timeline-area .horizontal-timeline .events{bottom:80px;height:2px;margin-left:10px;background:#ba0d30}
 #timeline-area .horizontal-timeline .filling-line{background-color:#ba0d30}
