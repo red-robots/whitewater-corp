@@ -13986,3 +13986,25 @@ body.page-template-page-about {
 .clear {
 	clear: both;
 }
+body.search {
+	.page-header {
+		margin-top: 40px;
+		a {
+			color: #000;
+		}
+	}
+}
+input.nav-search {
+	width: 100%;
+	border: 0;
+	height: 30px;
+	border-radius: 15px;
+	background-color: rgba(#fff, .6);
+	padding: 0 10px;
+	margin: 10px 0 0 0;
+	background: {
+		image: url(images/eyeglass.png);
+		position: right 10px top 5px;
+		repeat: no-repeat;
+	}
+}

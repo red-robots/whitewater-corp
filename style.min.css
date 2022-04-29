@@ -3383,6 +3383,9 @@ body.page-template-page-about ul li{width:auto;list-style-position:inside}
 #timeline-area.timeline-wrapper .timeline .history.even{margin-top:0}
 #timeline-area.timeline-wrapper .timeline .middle-line{position:absolute;top:0;left:0;height:100%;border-right:2px solid #ba0d30}
 .clear{clear:both}
+body.search .page-header{margin-top:40px}
+body.search .page-header a{color:#000}
+input.nav-search{width:100%;border:0;height:30px;border-radius:15px;background-color:rgba(255,255,255,0.6);padding:0 10px;margin:10px 0 0 0;background-image:url(images/eyeglass.png);background-position:right 10px top 5px;background-repeat:no-repeat}
 @media screen and (max-device-width:1024px){.featured-events-section{background-color:#FFF}
 .featured-events-section .flexwrap{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 .featured-events-section .postbox{width:50%;float:left}
