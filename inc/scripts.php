@@ -7,7 +7,7 @@ function bellaworks_scripts() {
 		'bellaworks-style',
 		 get_stylesheet_uri(),
 		 array(),
-		 '1.35'
+		 '1.36'
 	);
 
 	wp_deregister_script('jquery');
