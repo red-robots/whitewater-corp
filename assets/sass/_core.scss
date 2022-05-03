@@ -1508,18 +1508,26 @@ h2.stitle,
 		}
 		.title {
 			display: block;
-			width: 100%;
+			// width: 100%;
 			float: left;
 			font-family: $font_secondary;
-			font-size: 16px;
+			font-size: 20px;
 			font-weight: 400;
 			line-height: 1.2;
 			text-transform: uppercase;
 			text-align: center;
 			letter-spacing: 1px;
-			padding: 6px 15px;
-			position: relative;
+			padding: 6px 25px;
+			// position: relative;
 			z-index: 5;
+			position: absolute;
+			top: 40%;
+			left: 50%;
+    		transform: translate(-50%, 0);
+    		color: #fff;
+    		width: auto;
+    		background-color: rgba(#000, .5);
+    		border-radius: 5px;
 		}
 		.wrap:hover {
 			.bg {
