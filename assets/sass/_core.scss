@@ -812,6 +812,19 @@ body.nav-open {
 	@include tab {
 		margin-top: 64px;
 	}
+	.logo-overlay {
+		position: absolute;
+		top: 40%;
+		left: 0; 
+		right: 0; 
+		margin-left: auto; 
+		margin-right: auto; 
+		width: 200px;
+		z-index: 10;
+		@include tab {
+			width: 500px;
+		}
+	}
 	.static-banner,
 	.flexslider {
 		border-radius: 0px;
