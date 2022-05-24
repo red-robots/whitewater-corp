@@ -3683,6 +3683,7 @@ body.single-festival .filter-wrapper.filterstyle .select-wrap{width:75%}
 #timeline-area.timeline-wrapper .timeline{padding-top:100px;padding-bottom:100px}
 #timeline-area.timeline-wrapper .timeline .history{width:50%;margin-bottom:0;min-height:150px}
 #timeline-area.timeline-wrapper .timeline .history.hasimage{min-height:250px}
+#timeline-area.timeline-wrapper .timeline .history .h-title{width:62%}
 #timeline-area.timeline-wrapper .timeline .history .h-text{border-top:4px dotted #8c8c8c;padding-top:10px}
 #timeline-area.timeline-wrapper .timeline .history .h-text .photo{right:0;-webkit-transform:translateY(-65px);transform:translateY(-65px)}
 #timeline-area.timeline-wrapper .timeline .history .h-text.half .text{width:60%;padding-right:20px}

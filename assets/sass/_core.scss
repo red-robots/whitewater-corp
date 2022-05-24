@@ -13762,6 +13762,9 @@ body.page-template-page-about {
 			line-height: 1;
 			color: #565554;
 			margin-bottom: 10px;
+			@include tab {
+				width: 62%;
+			}
     }
     .h-text {
 			width: 100%;
@@ -13828,8 +13831,8 @@ body.page-template-page-about {
 	    		@include tab {
 	    			margin-top: 0;
 	    			width: 35%;
-            position: absolute;
-            top: 0;
+            		position: absolute;
+            		top: 0;
 	    		}
 	    		img {
 	    			width: 100%;
