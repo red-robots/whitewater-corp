@@ -3432,6 +3432,7 @@ body.search .has-image .text-col{width:67%;float:right;padding-left:30px;display
 #banner.taxonomy-banner .static-banner img.actual-image{display:none}
 body.single-activity #subpageSlides ul.slides,body.single-activity #subpageSlides li.sub-slide-item,body.single-activity #subpageSlides .slide-image{height:100% !important}
 .homerow .activities .imagebox{width:33.33%}
+.homerow .activities .imagebox .title{font-size:26px}
 .featured-events-section .postbox{width:33.33%}
 .featured-events-section.festival .postbox{width:25%}
 .home-video-gallery .video-big{width:50%;margin-bottom:0}

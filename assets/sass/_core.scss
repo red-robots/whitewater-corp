@@ -1542,6 +1542,9 @@ h2.stitle,
     		width: auto;
     		background-color: rgba(#000, .5);
     		border-radius: 5px;
+    		@include tab() {
+    			font-size: 26px;
+    		}
 		}
 		.wrap:hover {
 			.bg {
