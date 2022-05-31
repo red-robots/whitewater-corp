@@ -6,12 +6,12 @@ $sSectionIcon = get_sub_field('section_icon_sq');
 $sDataSection = sanitize_title_with_dashes($sSectionTitle);
  ?>
 <section id="classes" data-section="<?php echo $sDataSection; ?>" class="home-square-cards section-content section-classes post-type-entries <?php echo $wrapClass ?>">
-	<div class="wrapper titlediv">
+	<!-- <div class="wrapper titlediv">
 		<div class="shead-icon text-center">
 			<div class="icon"><span class="ci-task"></span></div>
 			<h2 class="stitle"><?php echo $sSectionTitle ?></h2>
 		</div>
-	</div>
+	</div> -->
 	<div id="data-container">
 		<div class="posts-inner">
 			<div class="flex-inner">

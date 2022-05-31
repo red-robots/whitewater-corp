@@ -1428,7 +1428,7 @@ body.scrolled .navbar{background:rgba(255,255,255,0.95)}
 .menu-toggle span.bar:before,.menu-toggle span.bar:after{content:"";display:block;width:100%;top:0;left:0}
 .menu-toggle span.bar:before{top:-8px}
 .menu-toggle span.bar:after{top:8px}
-.home-square-cards{padding-bottom:40px}
+.home-square-cards{padding-top:5px;padding-bottom:40px}
 body.nav-open{overflow:hidden}
 body.nav-open #overlay{display:block;-webkit-animation-name:fadeIn;animation-name:fadeIn}
 body.nav-open .menu-toggle{opacity:0}
@@ -1789,13 +1789,12 @@ body.subpage.single .intro-galleries.half .rightcol{width:100%;float:left}
 #section-checkin.section-content .flex-content.has-text .caption,#points-of-interest-inside.section-content .flex-content.has-text .caption{font-size:14px;font-weight:400;line-height:1.4;padding:30px 30px;margin:0 auto}
 #section-checkin.section-content .flex-content.has-text .caption p:last-child,#points-of-interest-inside.section-content .flex-content.has-text .caption p:last-child{margin-bottom:0}
 #section-checkin.section-content .inside.has-image,#points-of-interest-inside.section-content .inside.has-image{width:100%;float:left}
-#section-checkin.section-content .image-only,#points-of-interest-inside.section-content .image-only{width:100%;float:left;background-size:cover;background-position:center;background-repeat:no-repeat}
+#section-checkin.section-content .image-only,#points-of-interest-inside.section-content .image-only{width:100%;float:left;background-size:contain;background-position:center;background-repeat:no-repeat}
 #section-checkin.section-content .image-only img,#points-of-interest-inside.section-content .image-only img{width:100%;height:auto;float:left}
 #section-checkin.section-content .col-left .flex-content .inside,#points-of-interest-inside.section-content .col-left .flex-content .inside{height:100%}
 #section-checkin.section-content .col-left .flex-content.has-text .inside,#points-of-interest-inside.section-content .col-left .flex-content.has-text .inside{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 #section-checkin.section-content .col-left .image-only,#points-of-interest-inside.section-content .col-left .image-only{height:100%}
 #section-checkin.section-content .col-left .image-only img,#points-of-interest-inside.section-content .col-left .image-only img{display:block}
-#section-checkin.section-content .col-right,#points-of-interest-inside.section-content .col-right{min-height:600px}
 #section-checkin.section-content .col-right img.placeholder,#points-of-interest-inside.section-content .col-right img.placeholder{display:none}
 #section-checkin.section-content .col-right .flex-content,#section-checkin.section-content .col-right .inside,#section-checkin.section-content .col-right .image-only,#points-of-interest-inside.section-content .col-right .flex-content,#points-of-interest-inside.section-content .col-right .inside,#points-of-interest-inside.section-content .col-right .image-only{height:100%}
 #section-checkin.section-content .col-right .image-only img,#points-of-interest-inside.section-content .col-right .image-only img{visibility:hidden}
@@ -3465,8 +3464,10 @@ body.subpage.single .intro-galleries.half .rightcol{width:70%;padding-left:15px}
 #section-whattowear.half .model{width:35%;padding-right:10vw}
 #section-whattowear.half .options{width:65%}
 #section-checkin.section-content .col-left,#section-checkin.section-content .col-right,#points-of-interest-inside.section-content .col-left,#points-of-interest-inside.section-content .col-right{width:50%}
+#section-checkin.section-content .image-only,#points-of-interest-inside.section-content .image-only{background-size:cover}
 #section-checkin.section-content .col-left .flex-content,#points-of-interest-inside.section-content .col-left .flex-content{height:50%}
 #section-checkin.section-content .col-left .image-only img,#points-of-interest-inside.section-content .col-left .image-only img{display:none}
+#section-checkin.section-content .col-right,#points-of-interest-inside.section-content .col-right{min-height:600px}
 #section-faqs.half .faqs{width:60%;padding-right:4vw}
 #section-faqs.half .faq-image{width:40%}
 #section-featured-posts.half .block{width:50%}

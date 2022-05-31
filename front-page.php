@@ -9,13 +9,13 @@ get_header();
 			$intro = get_field('intro');
 			// get_template_part( 'parts/content', 'page' );
 			?>
-			<div class="intro-text-wrap home">
+			<!-- <div class="intro-text-wrap home">
 				<div class="wrapper">
 					<?php if ( $intro ) { ?>
 					<div class="intro-text"><?php echo $intro; ?></div>
 					<?php } ?>
 				</div>
-			</div>
+			</div> -->
 			<!-- <section class="main-description">
 				<div class="wrapper text-center">
 					<h1 class="pagetitle"><span><?php echo get_the_title(); ?></span></h1>
