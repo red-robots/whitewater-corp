@@ -32,13 +32,16 @@ $sDataSection = sanitize_title_with_dashes($sSectionTitle);
 				} else {
 					$target = '_self';
 				}
+				// if( $pagelink == '' ) {
+				// 	$pagelink = '';
+				// }
 				// echo '<pre>';
 				// print_r($thumbImage);
 				// echo '</pre>';
 			?>
 			<div class="postbox animated fadeIn <?php echo ($thumbImage) ? 'has-image':'no-image' ?>">
 				<div class="inside">
-					<a href="<?php echo $pagelink ?>" class="photo" target="<?php echo $target; ?>">
+					<a <?php if( $pagelink != '' ) { ?>href="<?php echo $pagelink ?>"<?php } ?> class="photo" target="<?php echo $target; ?>">
 						<?php if ($thumbImage) { ?>
 							<span class="imagediv" style="background-image:url('<?php echo $thumbImage['sizes']['large'] ?>')"></span>
 							<img src="<?php echo $rectangle ?>" alt="" class="feat-img placeholder">
@@ -60,11 +63,13 @@ $sDataSection = sanitize_title_with_dashes($sSectionTitle);
 					</div>
 
 				</div>
-				<div class="button">
-					<a href="<?php echo $pagelink ?>" class="btn-sm"  target="<?php echo $target; ?>">
-						<span><?php if( $btnLabel ) { echo $btnLabel; } else { echo 'See Details'; }?></span>
+				
+					<div class="button">
+					<a <?php if( $pagelink != '' ) { ?>href="<?php echo $pagelink ?>"<?php } ?> class="btn-sm"  target="<?php echo $target; ?>">
+							<span><?php if( $btnLabel ) { echo $btnLabel; } else { echo 'See Details'; }?></span>
 					</a>
-				</div>
+					</div>
+				
 			</div>
 			<?php $i++; endwhile; endif; //wp_reset_postdata(); ?>
 			</div>
