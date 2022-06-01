@@ -160,11 +160,11 @@ $posts = new WP_Query($args);
 			<?php } ?>
 
 			<?php if ($filter_message) { ?>
-			<div class="filter-message">
+			<!-- <div class="filter-message">
 				<div class="wrapper narrow">
 						<div id="fm"><?php echo $filter_message ?></div>
 				</div>
-			</div>
+			</div> -->
 			<?php } ?>
 
 			<?php /* Filter Options */ 
@@ -246,9 +246,9 @@ $posts = new WP_Query($args);
 					<div class="filter-inner">
 						<div class="flexwrapfilters">
 
-							<div class="filter-label">
+							<!-- <div class="filter-label">
 								<div class="inside"><span>Filter By</span></div>
-							</div>
+							</div> -->
 
 							
 							<!-- <?php if( !empty($bodyLocation) ) { ?>
@@ -266,7 +266,7 @@ $posts = new WP_Query($args);
 								</div>
 							<?php } ?> -->
 							<?php if( !empty($bodyType) ) { ?>
-								<div class="filter-group" data-filter-group="job-type">
+								<!-- <div class="filter-group" data-filter-group="job-type">
 									<div class="select-wrap-man ">
 										<div class="facetwp-facet-man  facetwp-type-fselect-man">
 											<select class="filters-select facetwp-dropdown-man" >
@@ -277,7 +277,7 @@ $posts = new WP_Query($args);
 											</select>
 										</div> 
 									</div>
-								</div>
+								</div> -->
 							<?php } ?>
 							<!-- <?php if( !empty($bodyDepartment) ) { ?>
 								<div class="filter-group" data-filter-group="job-department">
