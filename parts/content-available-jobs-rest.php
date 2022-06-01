@@ -25,7 +25,7 @@ $Water = array();
 
 
 // $response = wp_remote_get( 'https://whitewater.org/wp-json/wp/v2/job?per_page=100&jobtype=51' );
-$response = wp_remote_get( 'https://whitewater.org/wp-json/wp/v2/job?per_page=100' );
+$response = wp_remote_get( 'https://center.whitewater.org/wp-json/wp/v2/job?per_page=100' );
 // echo '<pre style="background-color: #fff;">';
 // print_r($response);
 // echo '<?pre>';

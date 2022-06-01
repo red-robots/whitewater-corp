@@ -16,14 +16,14 @@ function js_custom_init() {
             'menu_icon' => 'dashicons-format-status',
             'supports'  => array('title','editor')
         ),
-        array(
-            'post_type' => 'job',
-            'menu_name' => 'Jobs',
-            'plural'    => 'Jobs',
-            'single'    => 'Job',
-            'menu_icon' => 'dashicons-index-card',
-            'supports'  => array('title','editor')
-        ),
+        // array(
+        //     'post_type' => 'job',
+        //     'menu_name' => 'Jobs',
+        //     'plural'    => 'Jobs',
+        //     'single'    => 'Job',
+        //     'menu_icon' => 'dashicons-index-card',
+        //     'supports'  => array('title','editor')
+        // ),
         // array(
         //   'post_type' => array('story'),
         //   'menu_name' => 'Editions',
@@ -135,30 +135,30 @@ function build_taxonomies() {
       'taxonomy'  => 'edition',
       'query_var' => true
     ),
-    array(
-      'post_type' => array('job'),
-      'menu_name' => 'Job Types',
-      'plural'    => 'Job Types',
-      'single'    => 'Job Type',
-      'taxonomy'  => 'jobtype',
-      'query_var' => true
-    ),
-    array(
-      'post_type' => array('job'),
-      'menu_name' => 'Job Locations',
-      'plural'    => 'Job Locations',
-      'single'    => 'Job Location',
-      'taxonomy'  => 'joblocation',
-      'query_var' => true
-    ),
-    array(
-      'post_type' => array('job'),
-      'menu_name' => 'Departments',
-      'plural'    => 'Departments',
-      'single'    => 'Department',
-      'taxonomy'  => 'department',
-      'query_var' => true
-    ),
+    // array(
+    //   'post_type' => array('job'),
+    //   'menu_name' => 'Job Types',
+    //   'plural'    => 'Job Types',
+    //   'single'    => 'Job Type',
+    //   'taxonomy'  => 'jobtype',
+    //   'query_var' => true
+    // ),
+    // array(
+    //   'post_type' => array('job'),
+    //   'menu_name' => 'Job Locations',
+    //   'plural'    => 'Job Locations',
+    //   'single'    => 'Job Location',
+    //   'taxonomy'  => 'joblocation',
+    //   'query_var' => true
+    // ),
+    // array(
+    //   'post_type' => array('job'),
+    //   'menu_name' => 'Departments',
+    //   'plural'    => 'Departments',
+    //   'single'    => 'Department',
+    //   'taxonomy'  => 'department',
+    //   'query_var' => true
+    // ),
     
   );
 
