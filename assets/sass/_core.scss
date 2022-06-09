@@ -814,17 +814,31 @@ body.nav-open {
 		margin-top: 64px;
 	}
 	.logo-overlay {
-		position: absolute;
-		top: 40%;
-		left: 0; 
-		right: 0; 
-		margin-left: auto; 
-		margin-right: auto; 
+		// position: absolute;
+		// top: 40%;
+		// left: 0; 
+		// right: 0; 
+		// margin-left: auto; 
+		// margin-right: auto; 
 		width: 200px;
 		z-index: 10;
 		@include tab {
 			width: 500px;
 		}
+		img {
+			width: 100%;
+		}
+	}
+	.overlay-flex {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 	.static-banner,
 	.flexslider {
@@ -972,10 +986,10 @@ body.nav-open {
 	}
 	.slideCaption {
 		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
+		// height: 100%;
+		// position: absolute;
+		// top: 0;
+		// left: 0;
 		z-index: 10;
 		@include flexgroup-center();
 		.text {
@@ -1028,11 +1042,11 @@ body.nav-open {
 		}
 		.slideCaption,
 		.slidePageTitle {
-			width: 100%;
-			height: 100%;
-			position: absolute;
-			top: 0;
-			left: 0;
+			// width: 100%;
+			// height: 100%;
+			// position: absolute;
+			// top: 0;
+			// left: 0;
 			z-index: 5;
 			@include flexgroup-center();
 			text-align: center;

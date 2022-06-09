@@ -55,12 +55,31 @@ if($is_default_slide) { ?>
 					$is_video = ( isset($row['video']) && $row['video'] ) ? $row['video'] : '';
 					$slideType = ($is_video) ? 'type-video':'type-image';
 					$featuredType = ( isset($row['video_or_image']) && $row['video_or_image'] ) ? $row['video_or_image'] : ''; 
-					$placeThumb = $row['placeholder']; ?>
+					$placeThumb = $row['placeholder']; 
+					$fbutton = $row['cta_button'];
+					$buttonTitle = (isset($fbutton['title']) && $fbutton['title']) ? $fbutton['title'] : '';
+					$buttonLink = (isset($fbutton['url']) && $fbutton['url']) ? $fbutton['url'] : '';
+					$buttonTarget = (isset($fbutton['target']) && $fbutton['target']) ? $fbutton['target'] : '_self';
+					?>
 					<?php if( $featuredType=='video' && ($row['video']||$row['native_video']) ) { ?>
 						<li class="slideItem <?php echo $slideType; ?>">
-							<?php if($logoOverlay) { ?>
-								<div class="logo-overlay"><img src="<?php echo $logoOverlay['url'] ?>"></div>
-							<?php } ?>
+							
+							<div class="overlay-flex">
+								<?php if($logoOverlay) { ?>
+									<div class="logo-overlay"><img src="<?php echo $logoOverlay['url'] ?>"></div>
+								<?php } ?>
+								<?php if ( isset($row['slide_text']) && $row['slide_text'] ) { ?>
+									<div class="slideCaption"><div class="text"><?php echo $row['slide_text'] ?></div></div>
+								<?php } ?>
+								<?php if( $buttonLink ) { ?>
+									<div class="buttondiv">
+										<a href="<?php echo $buttonLink ?>" target="<?php echo $buttonTarget ?>" class="btn-sm xs">
+											<span><?php echo $buttonTitle ?></span>
+										</a>
+									</div>
+								<?php } ?>
+							</div>
+
 							<div class="iframe-wrapper <?php echo ($row['mobile_video']||$row['mobile_image'])?'yes-mobile':'no-mobile';?>">
 		                            <?php if($row['link']):?>
 								    <a href="<?php echo $row['link']; ?>" class="slideLink" <?php if ( $row['target'] ):echo 'target="_blank"'; endif; ?>></a>
@@ -167,6 +186,7 @@ if($is_default_slide) { ?>
 							<?php if($logoOverlay) { ?>
 								<div class="logo-overlay"><img src="<?php echo $logoOverlay['url'] ?>"></div>
 							<?php } ?>
+							
 	                                    <img class="desktop <?php if($i!==0) echo 'lazy';?>" <?php if($i!==0) echo 'data-';?>src="<?php echo $row['image']['url']; ?>"
 								     alt="<?php echo $row['image']['alt']; ?>">
 	                                    <?php if($row['mobile_image']):?>

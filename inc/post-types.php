@@ -16,14 +16,14 @@ function js_custom_init() {
             'menu_icon' => 'dashicons-format-status',
             'supports'  => array('title','editor')
         ),
-        // array(
-        //     'post_type' => 'job',
-        //     'menu_name' => 'Jobs',
-        //     'plural'    => 'Jobs',
-        //     'single'    => 'Job',
-        //     'menu_icon' => 'dashicons-index-card',
-        //     'supports'  => array('title','editor')
-        // ),
+        array(
+            'post_type' => 'job',
+            'menu_name' => 'Jobs',
+            'plural'    => 'Jobs',
+            'single'    => 'Job',
+            'menu_icon' => 'dashicons-index-card',
+            'supports'  => array('title','editor')
+        ),
         // array(
         //   'post_type' => array('story'),
         //   'menu_name' => 'Editions',
