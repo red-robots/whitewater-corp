@@ -829,6 +829,15 @@ body.nav-open {
 			width: 100%;
 		}
 	}
+	.button-center {
+		width: 100%;
+		text-align: center;
+	}
+	.buttondiv {
+		position: relative;
+		z-index: 999;
+		display: inline-block;
+	}
 	.overlay-flex {
 		display: flex;
 		flex-direction: column;
@@ -1059,15 +1068,20 @@ body.nav-open {
 				display: inline-block;
 				width: auto;
 				padding: 0.5em 1em 0.4em;
-				background: rgba(0, 0, 0, 0.85);
+				// background: rgba(0, 0, 0, 0.85);
 				color: #FFF;
 				font-family: $font_secondary;
-				font-size: 2em;
+				font-size: 1em;
 				font-weight: 300;
 				text-transform: uppercase;
 				letter-spacing: 2px;
 				float: none;
 				margin: 0 auto;
+				@include desk() {
+					font-size: 1.2em;
+					max-width: 40%;
+					margin: 20px auto 0 auto;
+				}
 			}
 		}
 	}

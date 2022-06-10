@@ -1436,6 +1436,8 @@ body.nav-open .menu-toggle{opacity:0}
 #banner.video-playing{z-index:300}
 #banner .logo-overlay{width:200px;z-index:10}
 #banner .logo-overlay img{width:100%}
+#banner .button-center{width:100%;text-align:center}
+#banner .buttondiv{position:relative;z-index:999;display:inline-block}
 #banner .overlay-flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;height:100%;position:absolute;top:0;left:0}
 #banner .static-banner,#banner .flexslider{border-radius:0}
 #banner .static-banner .slides .iframe-wrapper,#banner .flexslider .slides .iframe-wrapper{padding:0;position:relative;width:100%}
@@ -1466,7 +1468,7 @@ body.nav-open .menu-toggle{opacity:0}
 #banner .static-banner .image-wrapper.yes-mobile img.mobile{display:block}
 #banner .static-banner .slideCaption,#banner .static-banner .slidePageTitle{z-index:5;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center}
 #banner .static-banner .slideCaption .innertext,#banner .static-banner .slidePageTitle .innertext{width:100%;text-align:center;margin-top:12vh}
-#banner .static-banner .slideCaption .text,#banner .static-banner .slidePageTitle .text{display:inline-block;width:auto;padding:.5em 1em .4em;background:rgba(0,0,0,0.85);color:#FFF;font-family:"Lato",sans-serif;font-size:2em;font-weight:300;text-transform:uppercase;letter-spacing:2px;float:none;margin:0 auto}
+#banner .static-banner .slideCaption .text,#banner .static-banner .slidePageTitle .text{display:inline-block;width:auto;padding:.5em 1em .4em;color:#FFF;font-family:"Lato",sans-serif;font-size:1em;font-weight:300;text-transform:uppercase;letter-spacing:2px;float:none;margin:0 auto}
 #banner .slideTopTitle{width:100%;color:#FFF;background:rgba(186,12,47,0.85);position:absolute;top:86px;left:0;z-index:100}
 #banner .slideTopTitle .wrapper{padding-top:8px;padding-bottom:8px}
 #banner .slideTopTitle .toptext{font-size:18px;font-weight:300;line-height:1.2}
@@ -3734,6 +3736,7 @@ body.single-festival .filter-wrapper.filterstyle .select-wrap{width:75%}
 #timeline-area .horizontal-timeline .timeline{max-width:80%}
 #timeline-area .horizontal-timeline .timeline a.prev,#timeline-area .horizontal-timeline .timeline a.next{top:-53px}
 }@media(min-width:1200px){#banner .static-banner .slides .videoIframeDiv .playVidBtn,#banner .flexslider .slides .videoIframeDiv .playVidBtn{width:130px;height:130px}
+#banner .static-banner .slideCaption .text,#banner .static-banner .slidePageTitle .text{font-size:1.2em;max-width:40%;margin:20px auto 0 auto}
 .intro-text-wrap.home{max-width:50%}
 #section-awards .col-content.col-count-2 .result-data{width:50%;margin-top:0}
 .team-staff-section .photo{width:25%}
