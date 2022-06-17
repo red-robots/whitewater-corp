@@ -565,3 +565,35 @@ section.route-stories {
     }
   }
 }
+
+/*  Homepage Modifications */
+body.home {
+  .information-tabs-wrap {
+    .tabs-info ul a {
+      span.arrow {
+        &:before, &:after {
+          background-color: #efefef;
+        }
+      }
+    }
+    
+  }
+  .info-panel {
+    background-color: #efefef;
+    .wrapper {
+      padding: 80px 10px 0 10px;
+    }
+  }
+  .featured-events-section {
+    .postbox {
+      width: 100%;
+      padding: 0 10px 20px 10px;
+      @include tab() {
+        width: 33.33%;
+      }
+    }
+  }
+  .information-tabs-wrap .info-panel .info-inner {
+    max-width: 100%;
+  }
+}
