@@ -28,6 +28,28 @@ function custom_mime_types( $mimes ) {
     return $mimes;
 }
 add_filter( 'upload_mimes', 'custom_mime_types' );
+
+// Add featured image to REST API
+add_action('rest_api_init', 'register_rest_images' );
+function register_rest_images(){
+    register_rest_field( array('post'),
+        'fimg_url',
+        array(
+            'get_callback'    => 'get_rest_featured_image',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+function get_rest_featured_image( $object, $field_name, $request ) {
+    if( $object['featured_media'] ){
+        $img = wp_get_attachment_image_src( $object['featured_media'], 'app-thumb' );
+        return $img[0];
+    }
+    return false;
+}
+
+
 function get_images_dir($fileName=null) {
     return get_bloginfo('template_url') . '/images/' . $fileName;
 }
