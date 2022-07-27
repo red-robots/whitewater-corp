@@ -1,6 +1,15 @@
-<?php if ( $info = get_sub_field('feeds') ) { 
+<?php 
+$info = get_sub_field('feeds');
+// echo '<pre style="background-color:#fff;">';
+//     	print_r($info);
+//     	echo '</pre>';
+if ( $feeds !== '' ) { 
 		$sTitle = get_sub_field('section_label');
 		$sIcon = get_sub_field('section_icon');
+
+		
+
+
 	?>
   <?php if( $sTitle || $sIcon ) { ?>
   <section id="route-information" class="route-information fw-left section-content" data-section="Information">
@@ -24,7 +33,12 @@
           <?php 
           $j=1; 
           foreach( $info as $f ): 
-            $tabTitle = $f['tab_title'];
+            $tabTitle = ''; // reset
+	          $feed_type = ''; // reset
+	          $feed_source = ''; // reset
+	          $tabTitle = $f['tab_title'];
+	          $feed_type = $f['feed_type'];
+	          $feed_source = $f['feed_source'];
             
             // $panel = get_sub_field('tab_info');
             if( $tabTitle ) { ?>
@@ -35,12 +49,16 @@
         </div>
       </div>
       <div class="tabs-content">
-        <?php $i=1; foreach( $info as $f ):  
-          $tabTitle = get_sub_field('tab_title');
-          $feed_type = $f['feed_type'];
-          $feed_source = $f['feed_source'];
+        <?php $i=1; foreach( $info as $g ):  
+          $tabTitle = ''; // reset
+          $feed_type = ''; // reset
+          $feed_source = ''; // reset
+          $tabTitle = $g['tab_title'];
+          $feed_type = $g['feed_type'];
+          $feed_source = $g['feed_source'];
       //     echo '<pre style="background-color:#fff;">';
-	    	// print_r($f);
+      //     echo $feed_source;
+	    	// print_r($g);
 	    	// echo '</pre>';
           if( $feed_source ) { ?>
             <div id="info-panel-<?php echo $i?>" class="info-panel<?php echo ($i==1) ? ' active last-open':'';?>">

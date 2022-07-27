@@ -36,6 +36,7 @@ if( is_array($response) ) :
 						$thumbImage = $post['acf']['thumbnail_image']['url'];
 						$mobileBannerImg = $post['acf']['mobile-banner']['url'];
 						// $mobileImage2 = $post['id'];
+						$showInRest = $post['acf']['show_ww'];
 
 						$mobileThumbURL = '';
 						$mobileThumbALT = '';
@@ -52,6 +53,9 @@ if( is_array($response) ) :
 						$start = $post['acf']['start_date'];
 						$end = $post['acf']['end_date'];
 						$event_date = get_event_date_range($start,$end);
+
+
+						if( $showInRest == 'show' ) :
 						?>
 	    					<div class="postbox view-full <?php echo ($thumbImage) ? 'has-image':'no-image' ?>">
 								<a href="<?php echo $pagelink ?>" class="inside boxlink wave-effect" target="_blank">
@@ -82,6 +86,7 @@ if( is_array($response) ) :
 									</span>
 								</a>
 							</div>
+						<?php endif; ?>
 	    			<?php endforeach; ?>
 					</div>
 				</div>
