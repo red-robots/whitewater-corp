@@ -46,7 +46,8 @@ get_header();
 					// print_r($cards);
 					// echo '</pre>';
 					include(locate_template('parts/cards-square.php'));
-				elseif( get_row_layout() == 'rest_api_feed' ):
+				// elseif( get_row_layout() == 'rest_api_feed' ):
+					elseif( get_row_layout() == 'tabbed_section' ):
 					// $cards = get_sub_field('feeds');
 					// echo '<pre>';
 					// print_r($cards);

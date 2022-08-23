@@ -7,16 +7,19 @@
 // 	$source = $fs;
 
 // }
-$type = $feed_type;
-$source = $feed_source;
-$response = wp_remote_get( 'https://'.$source.'.whitewater.org/wp-json/wp/v2/'.$type.'?per_page=20' );
+// $type = $feed_type;
+// $source = $feed_source;
+// $response = wp_remote_get( 'https://'.$source.'.whitewater.org/wp-json/wp/v2/'.$type.'?per_page=20' );
 //$response = 'https://'.$source.'.whitewater.org/wp-json/wp/v2/'.$type.'?per_page=6' ;
 // echo $response;
 
-if( is_array($response) ) :
-    $code = wp_remote_retrieve_response_code( $response );
-    if(!empty($code) && intval(substr($code,0,1))===2): 
-        $body = json_decode(wp_remote_retrieve_body( $response),true); ?>
+// $cards = get_sub_field('card');
+$cards = $g['card'];
+
+if( is_array($cards) ) :
+    // $code = wp_remote_retrieve_response_code( $response );
+    // if(!empty($code) && intval(substr($code,0,1))===2): 
+        //$body = json_decode(wp_remote_retrieve_body( $response),true); ?>
 		    <div class="featured-events-section full">
 				<div class="wrapper-full">
 					<div class="flexwrap">
@@ -24,43 +27,52 @@ if( is_array($response) ) :
 					// echo $response;
 					$i = 1;
 					$a = 0; 
-			    	foreach( $body as $post ): 
+			    	foreach( $cards as $post ): 
 			    		// echo '<pre style="background-color:#fff;">';
 				    	// print_r($post);
 				    	// echo '</pre>';
 			    		$rectangle = get_bloginfo('template_url') . '/images/rectangle-narrow.png';
 						$square = get_bloginfo('template_url') . '/images/square.png';
-						$dateNow = date('Y-m-d');
-						$pid = $post['id'];
-						$pType = $post['type'];
-						$title = $post['title']['rendered'];
+						// $dateNow = date('Y-m-d');
+						// $pid = $post['id'];
+						// $pType = $post['type'];
+						$title = $post['title'];
 						$pagelink = $post['link'];
-						$thumbImage = $post['acf']['thumbnail_image']['url'];
-						$mobileBannerImg = $post['acf']['mobile-banner']['url'];
+						$thumbImage = $post['image']['url'];
+						$thumbDate = $post['date'];
+						// echo '<pre style="background-color:#fff;">';
+				  //   	print_r($pagelink);
+				  //   	echo '</pre>';
+						// if( $newTab == 'new' ){
+						// 	$target = '_blank';
+						// } else {
+						// 	$target = '_self';
+						// }
+						// $mobileBannerImg = $post['image']['mobile-banner']['url'];
 						// $mobileImage2 = $post['id'];
-						$showInRest = $post['acf']['show_ww'];
+						// $showInRest = $post['acf']['show_ww'];
 
-						$mobileThumbURL = '';
-						$mobileThumbALT = '';
-						if($mobileBannerImg) {
-							$mobileThumbURL = $post['acf']['mobile-banner']['url'];
-							$mobileThumbALT = $post['acf']['mobile-banner']['alt'];
-						} else {
-							if($mobileImage2) {
-								$mobileThumbURL = $mobileImage2['url'];
-								$mobileThumbALT = $mobileImage2['title'];
-							}
-						}
-						$upcoming = $post['acf']['eventstatus'];
-						$start = $post['acf']['start_date'];
-						$end = $post['acf']['end_date'];
-						$event_date = get_event_date_range($start,$end);
+						// $mobileThumbURL = '';
+						// $mobileThumbALT = '';
+						// if($mobileBannerImg) {
+						// 	$mobileThumbURL = $post['acf']['mobile-banner']['url'];
+						// 	$mobileThumbALT = $post['acf']['mobile-banner']['alt'];
+						// } else {
+						// 	if($mobileImage2) {
+						// 		$mobileThumbURL = $mobileImage2['url'];
+						// 		$mobileThumbALT = $mobileImage2['title'];
+						// 	}
+						// }
+						// $upcoming = $post['acf']['eventstatus'];
+						// $start = $post['acf']['start_date'];
+						// $end = $post['acf']['end_date'];
+						// $event_date = get_event_date_range($start,$end);
 
 
-						if( $showInRest == 'show' && $upcoming == 'upcoming' ) : $a++;
+						if( $cards ) : $a++;
 						?>
 	    					<div class="postbox view-full <?php echo ($thumbImage) ? 'has-image':'no-image' ?>">
-								<a href="<?php echo $pagelink ?>" class="inside boxlink wave-effect" target="_blank">
+								<a href="<?php echo $pagelink['url'] ?>" class="inside boxlink wave-effect" target="_blank">
 									
 									<?php if ($thumbImage) { ?>
 										<div class="imagediv image-square">
@@ -77,9 +89,9 @@ if( is_array($response) ) :
 
 									<div class="details">
 										<div class="info">
-											<div class="event-name"><?php echo $title ?><?php echo $a; ?></div>
-											<?php if ($event_date) { ?>
-											<div class="event-date"><?php echo $event_date ?></div>
+											<div class="event-name"><?php echo $title ?></div>
+											<?php if ($thumbDate) { ?>
+											<div class="event-date"><?php echo $thumbDate ?></div>
 											<?php } ?>
 										</div>
 									</div>
@@ -99,4 +111,4 @@ if( is_array($response) ) :
 				</div>
 			</div>
 	<?php endif; ?>
-<?php endif; ?>
+<?php //endif; ?>

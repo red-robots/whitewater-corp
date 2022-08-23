@@ -1,12 +1,16 @@
 <?php 
-$info = get_sub_field('t_tabs');
+$info = get_sub_field('feeds');
 // echo '<pre style="background-color:#fff;">';
 //     	print_r($info);
 //     	echo '</pre>';
-// if ( $feeds !== '' ) { 
-	$sTitle = get_sub_field('t_section_title');
-	$sIcon = get_sub_field('t_section_icon');
-?>
+if ( $feeds !== '' ) { 
+		$sTitle = get_sub_field('section_label');
+		$sIcon = get_sub_field('section_icon');
+
+		
+
+
+	?>
   <?php if( $sTitle || $sIcon ) { ?>
   <section id="route-information" class="route-information fw-left section-content" data-section="Information">
     <div class="shead-icon text-center fw-left">
@@ -33,8 +37,8 @@ $info = get_sub_field('t_tabs');
 	          $feed_type = ''; // reset
 	          $feed_source = ''; // reset
 	          $tabTitle = $f['tab_title'];
-	          // $feed_type = $f['feed_type'];
-	          // $feed_source = $f['feed_source'];
+	          $feed_type = $f['feed_type'];
+	          $feed_source = $f['feed_source'];
             // $type = $feed_type;
             // $source = $feed_source;
             // $response = 'https://'.$source.'.whitewater.org/wp-json/wp/v2/'.$type.'?per_page=20';
@@ -55,13 +59,13 @@ $info = get_sub_field('t_tabs');
           $feed_type = ''; // reset
           $feed_source = ''; // reset
           $tabTitle = $g['tab_title'];
-          // $feed_type = $g['feed_type'];
-          // $feed_source = $g['feed_source'];
+          $feed_type = $g['feed_type'];
+          $feed_source = $g['feed_source'];
       //     echo '<pre style="background-color:#fff;">';
       //     echo $feed_source;
 	    	// print_r($g);
 	    	// echo '</pre>';
-          if( $tabTitle ) { ?>
+          if( $feed_source ) { ?>
             <div id="info-panel-<?php echo $b?>" class="info-panel<?php echo ($b==1) ? ' active last-open':'';?>">
               <?php 
                   // echo '<pre style="background-color:#fff;">';
@@ -73,8 +77,8 @@ $info = get_sub_field('t_tabs');
               <div class="wrapper info-inner animated<?php echo ($b==1) ? ' fadeIn':'';?>"<?php echo ($b==1) ? ' style="display:block"':'';?>>
                 <div class="flexwrap">
                   <div class="wrap">
-                    <div class="info">fef
-                    	<?php include(locate_template('parts/homepage-feed-tab-cards.php')); ?>
+                    <div class="info">
+                    	<?php include(locate_template('parts/homepage-feed-rest.php')); ?>
                     </div>
                   </div>
                 </div>
@@ -86,4 +90,4 @@ $info = get_sub_field('t_tabs');
     </div>
   </section>
   <?php } ?>
-<?php// } ?>
+<?php } ?>
