@@ -1191,13 +1191,13 @@ button:focus{outline:0}
 #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center}
 #cboxTitle{position:absolute;bottom:-25px;left:0;text-align:left;width:60%;font-weight:bold;color:#fff;padding:4% 20% 8% 20%;line-height:1.3;font-size:20px}
 #cboxCurrent{position:absolute;bottom:-25px;left:58px;font-weight:bold;color:#7c7c7c}
-#cboxPrevious,#cboxNext,#cboxSlideshow,#cboxClose{border:0;padding:0;margin:0;overflow:visible;position:absolute;top:10px;background:url(images/controls-new.png);background-size:150px 100px;background-repeat:no-repeat;width:50px;height:50px;text-indent:-9999px;-webkit-box-shadow:none;box-shadow:none}
+#cboxPrevious,#cboxNext,#cboxSlideshow,#cboxClose{border:0;padding:0;margin:0;overflow:visible;position:absolute;top:-15px;background:url(images/controls-new.png);background-size:150px 100px;background-repeat:no-repeat;width:50px;height:50px;text-indent:-9999px;-webkit-box-shadow:none;box-shadow:none}
 #cboxPrevious:active,#cboxNext:active,#cboxSlideshow:active,#cboxClose:active{outline:0}
 #cboxPrevious{left:20px;background-position:-0 -0}
 #cboxPrevious:hover{background-position:-0 -50px}
 #cboxNext{left:90px;background-position:-50px -0}
 #cboxNext:hover{background-position:-50px -50px}
-#cboxClose{right:20px;background-position:-100px -0}
+#cboxClose{right:-15px;background-position:-100px -0}
 #cboxClose:hover{background-position:-100px -50px}
 .cboxSlideshow_on #cboxSlideshow{background-position:-125px 0;right:27px}
 .cboxSlideshow_on #cboxSlideshow:hover{background-position:-150px 0}
@@ -3483,6 +3483,14 @@ body.page-template-page-about ul li{width:auto;list-style-position:inside}
 body.search .page-header{margin-top:40px}
 body.search .page-header a{color:#000}
 input.nav-search{width:100%;border:0;height:30px;border-radius:15px;background-color:rgba(255,255,255,0.6);padding:0 10px;margin:10px 0 0 0;background-image:url(images/eyeglass.png);background-position:right 10px top 5px;background-repeat:no-repeat}
+.jobs-pop{width:100%;background-color:#fff;padding:20px 20px 30px 20px;text-align:center;line-height:1.6;margin:0 auto;overflow:hidden}
+.jobs-pop .popslide-cont{height:240px}
+.jobs-pop a{text-decoration:none}
+.jobs-pop li{list-style:none}
+.jobs-pop .pop-flexslider li.flex-nav-next,.jobs-pop .pop-flexslider li.flex-nav-prev,.jobs-pop .pop-flexslider .flex-control-paging{display:none}
+.jobs-pop .content{width:100%;float:left}
+.detail-icon{width:50px;margin:0 auto;padding-bottom:20px}
+.detail-icon img{width:100%}
 @media screen and (max-device-width:1024px){.featured-events-section{background-color:#FFF}
 .featured-events-section .flexwrap{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 .featured-events-section .postbox{width:50%;float:left}
@@ -3851,6 +3859,7 @@ section.route-map .map-frame{height:60vh}
 #timeline-area .horizontal-timeline .timeline{max-width:1100px}
 #timeline-area .horizontal-timeline .events-content{margin-top:10px}
 #timeline-area .history-data .info{min-height:450px}
+.jobs-pop .popslide-cont{height:427px}
 }@media(min-width:1300px){.information-tabs-wrap .tabs-info ul a span.arrow:before,.information-tabs-wrap .tabs-info ul a span.arrow:after{top:15px}
 .archive-posts-wrap .entry{width:33.33%}
 }@media screen and (max-width:1230px){.jobs.resetBtn{position:relative;right:12px;top:3px;float:left}

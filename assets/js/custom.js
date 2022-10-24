@@ -2,6 +2,8 @@
 
 function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _typeof(obj) {
   "@babel/helpers - typeof";
 
@@ -378,6 +380,28 @@ jQuery(document).ready(function ($) {
       }
     });
   }
+
+  $(window).load(function () {
+    $('.pop-flexslider').flexslider({
+      smoothHeight: false,
+      animation: "slide"
+    });
+  });
+
+  var cboxOptions = _defineProperty({
+    width: '90%',
+    height: '90%',
+    maxWidth: '650px',
+    inline: true
+  }, "width", "100%");
+
+  $(".inline").colorbox(cboxOptions);
+  $(window).resize(function () {
+    $.colorbox.resize({
+      width: window.innerWidth > parseInt(cboxOptions.maxWidth) ? cboxOptions.maxWidth : cboxOptions.width,
+      height: window.innerHeight > parseInt(cboxOptions.maxHeight) ? cboxOptions.maxHeight : cboxOptions.height
+    });
+  });
   /* Today (Top) */
   // $(".topinfo .today a").on("click",function(e){
   // 	e.preventDefault();
@@ -390,7 +414,6 @@ jQuery(document).ready(function ($) {
   // 		//$(".topinfo .today").removeClass("open");
   // 	}
   // );
-
 
   $(document).on('click', function (e) {
     var tag = $(this);

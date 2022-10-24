@@ -7,7 +7,7 @@ function bellaworks_scripts() {
 		'bellaworks-style',
 		 get_stylesheet_uri(),
 		 array(),
-		 '1.42'
+		 '1.43'
 	);
 
 	wp_deregister_script('jquery');
@@ -55,6 +55,12 @@ function bellaworks_scripts() {
 			true 
 		);
 
+	wp_enqueue_script( 
+			'bellaworks-colorbox', 
+			get_template_directory_uri() . '/assets/js/vendors/colorbox.js', 
+			array(), '2.17', 
+			true 
+		);
 
 	wp_enqueue_script( 
 			'bellaworks-custom', 

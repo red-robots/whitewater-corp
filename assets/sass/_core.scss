@@ -14063,3 +14063,47 @@ input.nav-search {
 		repeat: no-repeat;
 	}
 }
+.jobs-pop {
+	width: 100%;
+	background-color: #fff;
+	padding: 20px 20px 30px 20px;
+	text-align: center;
+	line-height: 1.6;
+	margin: 0 auto;
+	overflow: hidden;
+	.popslide-cont {
+		height: 240px;
+		@include desk() {
+			height: 427px;
+		}
+	}
+	a {
+		text-decoration: none;
+	}
+	li {
+		list-style: none;
+	}
+	.pop-flexslider {
+		li.flex-nav-next, li.flex-nav-prev, .flex-control-paging {
+			display: none;
+		}
+	}
+	.content {
+		width: 100%;
+		float: left;
+	}
+	// @include tab() {
+	// 	width: 80%;
+	// }
+	// @include desk() {
+	// 	width: 40%;
+	// }
+}
+.detail-icon {
+	width: 50px;
+	margin: 0 auto;
+	padding-bottom: 20px;
+	img {
+		width: 100%;
+	}
+}

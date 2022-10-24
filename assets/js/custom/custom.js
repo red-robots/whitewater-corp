@@ -47,6 +47,7 @@ jQuery(document).ready(function ($) {
 // 	});
 // }
 
+
 // $("select#diff").on("change", vali);
 
 $("select#diff").change(function() {
@@ -393,9 +394,28 @@ Reference: http://jsfiddle.net/BB3JK/47/
 
 
     }
-	
- 	
 
+
+    $(window).load(function() {
+	  $('.pop-flexslider').flexslider({
+	    smoothHeight: false,
+	    animation: "slide"
+	  });
+	});
+	
+ 	var cboxOptions = {
+	  width: '90%',
+	  height: '90%',
+	  maxWidth: '650px',
+	  inline:true, width:"100%"
+	}
+$(".inline").colorbox(cboxOptions);
+$(window).resize(function(){
+    $.colorbox.resize({
+      width: window.innerWidth > parseInt(cboxOptions.maxWidth) ? cboxOptions.maxWidth : cboxOptions.width,
+      height: window.innerHeight > parseInt(cboxOptions.maxHeight) ? cboxOptions.maxHeight : cboxOptions.height
+    });
+});
 	
  	/* Today (Top) */
  	// $(".topinfo .today a").on("click",function(e){
