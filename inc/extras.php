@@ -2466,3 +2466,5 @@ function is_faqs_visible($postid=null) {
     $faqVisible = ($postid) ? get_field("faqs_visibility",$postid) : get_field("faqs_visibility");
     return ( isset($faqVisible[0]) && $faqVisible[0]=='hide' ) ? false : true;
 }
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop');

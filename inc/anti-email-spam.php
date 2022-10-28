@@ -22,26 +22,26 @@ function extract_emails_from($string) {
   return $matches[0];
 }
 
-add_filter ('the_content', 'anti_email_spam', 15);
-function anti_email_spam ($string) {
-  $content = '';
-  $emails_matched = ($string) ? extract_emails_from($string) : '';
-  if($emails_matched) {
-    foreach($emails_matched as $em) {
-      $encrypted = antispambot($em,1);
-      $replace = 'mailto:'.$em;
-      $new_mailto = 'mailto:'.$encrypted;
-      $string = str_replace($replace, $new_mailto, $string);
-      $rep2 = $em.'</a>';
-      $new2 = antispambot($em).'</a>';
-      $string = str_replace($rep2, $new2, $string);
-    }
-    $content = wpautop($string);
-  } else {
-    $content = wpautop($string);
-  }
-  return $content;
-}
+// add_filter ('the_content', 'anti_email_spam', 15);
+// function anti_email_spam ($string) {
+//   $content = '';
+//   $emails_matched = ($string) ? extract_emails_from($string) : '';
+//   if($emails_matched) {
+//     foreach($emails_matched as $em) {
+//       $encrypted = antispambot($em,1);
+//       $replace = 'mailto:'.$em;
+//       $new_mailto = 'mailto:'.$encrypted;
+//       $string = str_replace($replace, $new_mailto, $string);
+//       $rep2 = $em.'</a>';
+//       $new2 = antispambot($em).'</a>';
+//       $string = str_replace($rep2, $new2, $string);
+//     }
+//     $content = wpautop($string);
+//   } else {
+//     $content = wpautop($string);
+//   }
+//   return $content;
+// }
 
 function email_obfuscator($string) {
   $output = '';
