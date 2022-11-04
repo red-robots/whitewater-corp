@@ -122,7 +122,7 @@ $post_id = get_the_ID(); ?>
 						<div class="post-content <?php echo ($videoId) ? 'twocol':'onecol'; ?>">
 							<?php if ($short_description) { ?>
 							<div class="shortdesc">
-								<?php echo anti_email_spam($short_description); ?>
+								<?php echo $short_description; ?>
 							</div>	
 							<?php } ?>
 						</div>
@@ -145,7 +145,7 @@ $post_id = get_the_ID(); ?>
 						<?php if ($main_content) { ?>
 						<div class="textcol">
 							<div class="inside">
-								<div class="textwrap"><?php echo anti_email_spam( $main_content ); ?></div>
+								<div class="textwrap"><?php echo $main_content; ?></div>
 								<?php if ($author_description) { ?>
 								<div class="author-bio"><?php echo $author_description ?></div>	
 								<?php } ?>
