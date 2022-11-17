@@ -15,6 +15,14 @@
  */
 define('THEMEURI',get_template_directory_uri() . '/');
 
+add_filter( 'mime_types', 'wpse_mime_types' );
+function wpse_mime_types( $existing_mimes ) {
+    // Add csv to the list of allowed mime types
+    $existing_mimes['csv'] = 'text/csv';
+
+    return $existing_mimes;
+}
+
 function custom_mime_types( $mimes ) { 
     // Add new MIME types here
     $mimes['kml'] = 'application/vnd.google-earth.kml+xml';
