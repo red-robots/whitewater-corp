@@ -212,7 +212,9 @@ if( $posts->have_posts() ) { ?>
 								<?php if ($postsByDepartment) { ?>
 									
 									<?php foreach ($postsByDepartment as $p) {
-										
+										// echo '<pre>';
+										// print_r($p);
+										// echo '</pre>';
 										$department = $p['department'];
 										$desc = $p['description'];
 										$entries = $p['entries'];
@@ -223,7 +225,7 @@ if( $posts->have_posts() ) { ?>
 										<div class="job-group">
 											<div class="job-department"><span><?php echo $department ?></span></div>
 											<?php if($desc){ ?>
-												<div class="depart-desc"><?php echo $desc; ?></div>
+												<!-- <div class="depart-desc"><?php echo $desc; ?></div> -->
 											<?php } ?>
 											<?php foreach($entries as $e) { 
 											$pid = $e->ID; 
