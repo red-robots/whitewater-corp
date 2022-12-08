@@ -14149,3 +14149,44 @@ input.nav-search {
         font-size: 20px;
     }
 }
+.cont-icon-wrap {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	.cicon {
+		flex-basis: 45%;
+		width: 45%;
+		max-width: 100px;
+		aspect-ratio: 3/2;
+		object-fit: contain;
+		mix-blend-mode: color-burn;
+		text-align: center;
+		color: #fff;
+		text-transform: uppercase;
+		margin: 20px;
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+		img {
+			width: 100%;
+			-webkit-filter: grayscale(1) invert(1);
+   			filter: grayscale(1) invert(1);
+   			margin: 0 auto;
+   			transform: scale(1);
+   			transition: all ease .2s;
+		}
+		&:hover {
+			img {
+				transform: scale(1.1);
+			}
+		}
+		@media screen and (min-width: $tabwidth) {
+			flex-basis: 22%;
+			width: 22%;
+			max-width: 100px;
+		}
+	}
+}

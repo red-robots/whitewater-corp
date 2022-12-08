@@ -15,8 +15,9 @@
           <?php $j=1; while( have_rows('additional_info_job') ): the_row(); 
             $tabTitle = get_sub_field('tab_title');
             $tabIcon = get_sub_field('tab_icon');
+            $contIcons = get_sub_field('content_icons');
             $panel = get_sub_field('tab_info');
-            if( $tabTitle && $panel ) { ?>
+            if( $tabTitle && $panel || $tabTitle && $contIcons ) { ?>
               <li class="tab<?php echo ($j==1) ? ' active':'';?>">
                 <a href="#" data-rel="#info-panel-<?php echo $j?>" class="tablink">
                 <span class="link"><span><?php echo $tabTitle ?></span></span><span class="arrow"></span>
@@ -33,11 +34,28 @@
       <div class="tabs-content">
         <?php $i=1; while( have_rows('additional_info_job') ): the_row(); 
           $tabTitle = get_sub_field('tab_title');
+          $contIcons = get_sub_field('content_icons');
           $panel = get_sub_field('tab_info');
-          if( $tabTitle && $panel ) { ?>
+          if( $tabTitle && $panel || $tabTitle && $contIcons  ) { ?>
             <div id="info-panel-<?php echo $i?>" class="info-panel<?php echo ($i==1) ? ' active last-open':'';?>">
               <h3 class="info-title"><?php echo $tabTitle ?></h3>
               <div class="wrapper info-inner animated<?php echo ($i==1) ? ' fadeIn':'';?>"<?php echo ($i==1) ? ' style="display:block"':'';?>>
+                <?php if( $contIcons ) { ?>
+                  <div class="cont-icon-wrap">
+                    <?php foreach( $contIcons as $ci ) { 
+                      // echo '<pre style="background: #fff;">';
+                      // print_r($ci);
+                      // echo '</pre>';
+                      ?>
+                      <div class="cicon">
+                        <?php if( $ci['link'] ) { echo '<a href="'.$ci['link'].'">'; } ?>
+                          <img src="<?php echo $ci['url'] ?>">
+                          <?php if( $ci['title'] ) { echo '<h3>'.$ci['title'].'</h3>';} ?>
+                        <?php if( $ci['link'] ) { echo '</a>'; } ?>
+                      </div>
+                    <?php } ?>
+                  </div>
+                <?php } ?>
                 <div class="flexwrap">
                   <div class="wrap">
                     <div class="info"><?php echo $panel ?></div>
