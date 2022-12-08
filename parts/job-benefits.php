@@ -5,7 +5,7 @@
     <div class="shead-icon text-center fw-left">
       <div class="wrapper">
         <div class="icon"><span class="ci-info"></span></div>
-        <h2 class="stitle">Additional Information</h2>
+        <h2 class="stitle">Benefits</h2>
       </div>
     </div>
     <div class="information-tabs-wrap">
@@ -56,11 +56,13 @@
                     <?php } ?>
                   </div>
                 <?php } ?>
-                <div class="flexwrap">
-                  <div class="wrap">
-                    <div class="info"><?php echo $panel ?></div>
+                <?php if( $panel ) { ?>
+                  <div class="flexwrap">
+                    <div class="wrap">
+                      <div class="info"><?php echo $panel ?></div>
+                    </div>
                   </div>
-                </div>
+                <?php } ?>
               </div>
             </div>
           <?php $i++; } ?>
