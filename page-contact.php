@@ -36,7 +36,7 @@ get_header(); ?>
 							<?php if ($contact_info) { ?>
 								<div class="address col">
 									<div class="inside">
-										<div class="wrap"><?php echo anti_email_spam($contact_info); ?></div>
+										<div class="wrap"><?php echo $contact_info; ?></div>
 									</div>
 								</div>	
 							<?php } ?>
@@ -53,7 +53,7 @@ get_header(); ?>
 					<?php if ($contact_form) { ?>
 					<div class="rightcol">
 						<div class="wrap">
-							<div class="contact-form"><?php echo anti_email_spam($contact_form); ?></div>
+							<div class="contact-form"><?php echo $contact_form; ?></div>
 						</div>
 					</div>
 					<?php } ?>

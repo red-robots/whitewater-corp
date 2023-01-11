@@ -46,12 +46,13 @@
                       // echo '<pre style="background: #fff;">';
                       // print_r($ci);
                       // echo '</pre>';
+                      $websiteUrl = get_field('image_website', $ci['ID']);
                       ?>
                       <div class="cicon">
-                        <?php if( $ci['link'] ) { echo '<a href="'.$ci['link'].'">'; } ?>
+                        <?php if( $websiteUrl ) { echo '<a href="'.$websiteUrl.'">'; } ?>
                           <img src="<?php echo $ci['url'] ?>">
                           <?php if( $ci['title'] ) { echo '<h3>'.$ci['title'].'</h3>';} ?>
-                        <?php if( $ci['link'] ) { echo '</a>'; } ?>
+                        <?php if( $websiteUrl ) { echo '</a>'; } ?>
                       </div>
                     <?php } ?>
                   </div>
