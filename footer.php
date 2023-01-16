@@ -152,5 +152,17 @@
 
   gtag('config', 'G-NRGGJGQWPB');
 </script>
+<script type="text/javascript">
+// 	jQuery(document).ready(function ($) {
+
+
+
+// $(document).on('click', '.sitelinks a', function () {
+//       // console.log($(this));
+//       $('.active').removeClass('active');
+//       $(this).parent().addClass('active');
+//     });
+// });// END
+</script>
 </body>
 </html>

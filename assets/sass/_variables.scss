@@ -28,7 +28,8 @@ $tabwidth: 820px;
 $midwidth: 960px;
 $deskwidth: 1200px;
 $xxl: 1300px;
-$nav_width: 350px;
+// $nav_width: 350px;
+$nav_width: 450px;
 
 @mixin xxs { @media (min-width: $portrait) { @content; } }
 @mixin xs { @media (min-width: $xswidth) { @content; } }

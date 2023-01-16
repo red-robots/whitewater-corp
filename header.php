@@ -68,6 +68,8 @@ if($postHeroImage) {
 	<?php
 	/* NAVIGATION */
 	get_template_part("parts/navigation");
+	get_template_part("parts/navigation-pisgah");
+	get_template_part("parts/navigation-santee");
 	?>
 
 

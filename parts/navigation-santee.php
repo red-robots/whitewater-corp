@@ -5,20 +5,20 @@ $current_post_id = ( isset($post->ID) && $post->ID ) ? $post->ID : '';
 $current_url = ($current_post_id) ? get_permalink($current_post_id) : '';
 $current_url = ($current_url) ? rtrim($current_url,"/") : '';
 
-$parents = get_field("parent_menu","option");
+$parents = get_field("parent_menu_santee","option");
 $childenMenuItems = array();
 
 $secondary_menu = get_field("secondary_menu","option");
 
 if($parents) { ?>
 
-<div id="site-navigationc" class="corpnav">
-	<a href="#" id="closeNav" class="closeNav"><span>x</span></a>
+<div id="site-navigations" class="santeenav">
+	<a href="#" id="closeNav" class="closeNav santeeclose"><span>x</span></a>
 
 
 	<div class="prenav">
 		<ul>
-			<li class="sitelinks corplink active">
+			<li class="sitelinks corplink ">
 				<a href="#a">Whitewater</a>
 			</li>
 			<li class="sitelinks centerlink ">
@@ -27,7 +27,7 @@ if($parents) { ?>
 			<li class="sitelinks pisgahlink ">
 				<a href="#b">Pisgah</a>
 			</li>
-			<li class="sitelinks santeelink ">
+			<li class="sitelinks santeelink active">
 				<a href="#f">Santee</a>
 			</li>
 		</ul>
@@ -36,7 +36,7 @@ if($parents) { ?>
 	
 	<?php //get_template_part('parts/prenav'); ?>
 	<div class="nav-inner">
-		<nav class="navigation">
+		<nav class="navigationz santee">
 			<ul class="menu">
 				<?php $i=1; foreach ($parents as $p) { 
 					$parent_name = $p['parent_menu_name'];
@@ -110,15 +110,15 @@ if($parents) { ?>
 	<?php /* CHILDREN MENU */ 
 	if($childenMenuItems) { ?>
 
-		<div id="childrenNavs" class="navigation-children">
-			<a href="#" id="closeNavChild" class="closeNav"><span>x</span></a>
+		<div id="childrenNavs" class="navigation-children-santee">
+			<a href="#" id="closeNavChild" class="closeNav santeeclose"><span>x</span></a>
 			<div class="navchild-inner">
 				
 				<?php $c=1; foreach ($childenMenuItems as $k=>$ch) { 
 					$parent_name = $ch['parent_name'];
 					$childrenData = $ch['children_data'];
 					if($childrenData) { ?>
-					<div class="children-group <?php echo $k ?>" data-parent="<?php echo $k ?>">
+					<div class="children-group-santee <?php echo $k ?>" data-parent="<?php echo $k ?>">
 						<div class="parent-name"><?php echo $parent_name ?></div>
 						<div class="children-menu-wrap">
 							<?php foreach ($childrenData as $e) { 

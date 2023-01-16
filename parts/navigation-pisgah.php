@@ -5,26 +5,26 @@ $current_post_id = ( isset($post->ID) && $post->ID ) ? $post->ID : '';
 $current_url = ($current_post_id) ? get_permalink($current_post_id) : '';
 $current_url = ($current_url) ? rtrim($current_url,"/") : '';
 
-$parents = get_field("parent_menu","option");
+$parents = get_field("parent_menu_pisgah","option");
 $childenMenuItems = array();
 
 $secondary_menu = get_field("secondary_menu","option");
 
 if($parents) { ?>
 
-<div id="site-navigationc" class="corpnav">
-	<a href="#" id="closeNav" class="closeNav"><span>x</span></a>
+<div id="site-navigationp" class="pisgahnav">
+	<a href="#" id="closeNav" class="closeNav pisgahclose"><span>x</span></a>
 
 
 	<div class="prenav">
 		<ul>
-			<li class="sitelinks corplink active">
+			<li class="sitelinks corplink ">
 				<a href="#a">Whitewater</a>
 			</li>
 			<li class="sitelinks centerlink ">
 				<a href="#b">Center</a>
 			</li>
-			<li class="sitelinks pisgahlink ">
+			<li class="sitelinks pisgahlink active">
 				<a href="#b">Pisgah</a>
 			</li>
 			<li class="sitelinks santeelink ">
@@ -36,7 +36,7 @@ if($parents) { ?>
 	
 	<?php //get_template_part('parts/prenav'); ?>
 	<div class="nav-inner">
-		<nav class="navigation">
+		<nav class="navigationz pisgah">
 			<ul class="menu">
 				<?php $i=1; foreach ($parents as $p) { 
 					$parent_name = $p['parent_menu_name'];
@@ -110,15 +110,15 @@ if($parents) { ?>
 	<?php /* CHILDREN MENU */ 
 	if($childenMenuItems) { ?>
 
-		<div id="childrenNavs" class="navigation-children">
-			<a href="#" id="closeNavChild" class="closeNav"><span>x</span></a>
+		<div id="childrenNavs" class="navigation-children-pisgah">
+			<a href="#" id="closeNavChild" class="closeNav pisgahclose"><span>x</span></a>
 			<div class="navchild-inner">
 				
 				<?php $c=1; foreach ($childenMenuItems as $k=>$ch) { 
 					$parent_name = $ch['parent_name'];
 					$childrenData = $ch['children_data'];
 					if($childrenData) { ?>
-					<div class="children-group <?php echo $k ?>" data-parent="<?php echo $k ?>">
+					<div class="children-group-pisgah <?php echo $k ?>" data-parent="<?php echo $k ?>">
 						<div class="parent-name"><?php echo $parent_name ?></div>
 						<div class="children-menu-wrap">
 							<?php foreach ($childrenData as $e) { 

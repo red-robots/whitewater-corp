@@ -455,7 +455,8 @@ body.scrolled .navbar {
 	@include animateThis(0.5s);
 }
 
-#site-navigation {
+// #site-navigation
+.corpnav, .pisgahnav, .santeenav, .centernav {
 	position: fixed;
 	top: 30px;
 	right: 0;
@@ -470,6 +471,7 @@ body.scrolled .navbar {
 	&.open {
 		transform: translateX(0);
 		max-width: $nav_width;
+		// max-width: 450px;
 		width: 100%;
 		box-shadow: -1px 4px 30px rgba(0,0,0,0.3);
 		overflow: visible;
@@ -562,7 +564,10 @@ body.scrolled .navbar {
 		}
 	}
 }
-.navigation-children {
+.navigation-children,
+.navigation-children-pisgah,
+.navigation-children-santee,
+.navigation-children-center {
 	position: fixed;
 	top: 0;
 	right: $nav_width;
@@ -625,7 +630,10 @@ body.scrolled .navbar {
 	.submenu li.current_page_item > a {
 		color: $red;
 	}
-	.children-group {
+	.children-group,
+	.children-group-pisgah,
+	.children-group-santee,
+	.children-group-center {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -13183,12 +13191,16 @@ body.single-race .filter-wrapper {
 }
 
 @media screen and (max-width: 799px) {
-	#site-navigation {
+	// #site-navigation
+	.corpnav, .pisgahnav, .santeenav, .centernav {
 		&.open {
 			max-width: 100%;
 		}
 	}
-	.navigation-children {
+	.navigation-children,
+	.navigation-children-pisgah,
+	.navigation-children-santee,
+	.navigation-children-center {
 		&.open {
 			right: 0;
 			max-width: 100%;
@@ -13199,25 +13211,31 @@ body.single-race .filter-wrapper {
 	.closeNav {
 		z-index: 3000;
 	}
-	#site-navigation.child-open {
-		.closeNav {
-			border: 1px solid $red;
-			color: $red;
-			span {
-				&:before, &:after {
-					background: $red;
+	// #site-navigation.child-open
+	.corpnav, .pisgahnav, .santeenav, .centernav {
+		&.child-open {
+			.closeNav {
+				border: 1px solid $red;
+				color: $red;
+				span {
+					&:before, &:after {
+						background: $red;
+					}
+				}
+				&#closeNavChild {
+					display: inline-block;
 				}
 			}
-			&#closeNavChild {
-				display: inline-block;
+			#closeNav.closeNav {
+				display: none;
 			}
-		}
-		#closeNav.closeNav {
-			display: none;
 		}
 	}
 	body.logged-in.admin-bar {
-		.navigation-children .children-group.open {
+		.navigation-children .children-group.open,
+		.navigation-children-pisgah .children-group-pisgah.open,
+		.navigation-children-santee .children-group-santee.open
+		.navigation-children-center .children-group-center.open {
 			padding-top: 14vh;
 		}
 	}
@@ -13323,9 +13341,12 @@ body.logged-in.admin-bar {
 		.closeNav {
 			top: 65px;
 		}
-		#site-navigation .nav-inner {
-			padding-top: 15vh;
-		}
+		// #site-navigation .nav-inner
+		.corpnav, .pisgahnav, .santeenav, .centernav {
+			&.nav-inner {
+				padding-top: 15vh;
+			}
+		} 
 	}
 }
 
@@ -14188,5 +14209,37 @@ input.nav-search {
 			width: 22%;
 			max-width: 100px;
 		}
+	}
+}
+.prenav {
+	width: auto;
+	float: right;
+	height: 100%;
+	background: rgba(186, 13, 48, 0.95);
+	padding: 90px 0 50px;
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		margin: 20px 0;
+		display: block;
+		&.active a {
+			background-color: rgba(#fff, .2);
+		}
+	}
+	a {
+		color: #fff;
+		padding: 8px 20px;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: bold;
+		text-transform: uppercase;
+		display: block;
+	}
+}
+.open {
+	.prenav li {
+
 	}
 }
