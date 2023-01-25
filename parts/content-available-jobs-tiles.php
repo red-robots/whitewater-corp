@@ -173,6 +173,7 @@ if( $posts->have_posts() ) { ?>
 						<?php  
 							$args = array(
 							'post_type' => 'job',
+							'posts_per_page' => -1,
 							'tax_query' => array(
 								array(
 									'taxonomy' => $taxonomy,
