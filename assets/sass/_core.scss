@@ -459,22 +459,24 @@ body.scrolled .navbar {
 .corpnav, .pisgahnav, .santeenav, .centernav {
 	position: fixed;
 	top: 30px;
-	right: 0;
-	max-width: 0;
-	width: 0;
+	right: -$nav_width;
+	max-width: $nav_width;
+	width: 100%;
 	height: 100%;
-	z-index: 9999;
+	z-index: -99;
 	transform: translateX(120%);
 	transition: all ease .3s;
 	backface-visibility: hidden;
 	overflow: hidden;
+  @include animateThis(1s);
 	&.open {
 		transform: translateX(0);
-		max-width: $nav_width;
-		// max-width: 450px;
 		width: 100%;
 		box-shadow: -1px 4px 30px rgba(0,0,0,0.3);
 		overflow: visible;
+    right: 0;
+    z-index: 9999;
+    @include animateEffect('fadeIn');
 	}
 	.nav-inner {
 		background: rgba($red,.95);
@@ -700,6 +702,16 @@ body.scrolled .navbar {
 	}
 }
 
+.nav__main, .nav__other {
+  height: 100%;
+}
+
+.nav__other {
+  &.show .navigationz {
+    @include animateEffect('fadeIn');
+  }
+}
+
 .closeNav {
 	display: block;
 	width: 25px;
@@ -805,6 +817,10 @@ body.nav-open {
 	.menu-toggle {
 		opacity: 0;
 	}
+}
+
+.corpnav.open-nav {
+
 }
 
 /* Slider */
