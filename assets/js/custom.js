@@ -199,6 +199,8 @@ jQuery(document).ready(function ($) {
     // $(".corpnav li.parent-link, .centernav li.parent-link, .pisgahnav li.parent-link, .santeenav li.parent-link").removeClass("active");
     // $(".corpnav, .centernav, .pisgahnav, .santeenav").removeClass("child-open");
 
+    /* Close all the elements inside navigation that are opened or active */
+
     $(".defaultNav").removeClass("open");
     $('.nav__main').show();
     $('.nav__other').removeClass('show').html("");

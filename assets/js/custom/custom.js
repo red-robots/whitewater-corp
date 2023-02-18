@@ -202,7 +202,8 @@ Reference: http://jsfiddle.net/BB3JK/47/
 		// $(".corpnav *, .centernav *, .pisgahnav *, .santeenav *").removeClass("open");
 		// $(".corpnav li.parent-link, .centernav li.parent-link, .pisgahnav li.parent-link, .santeenav li.parent-link").removeClass("active");
 		// $(".corpnav, .centernav, .pisgahnav, .santeenav").removeClass("child-open");
-	 
+	   
+    /* Close all the elements inside navigation that are opened or active */ 
     $(".defaultNav").removeClass("open");
     $('.nav__main').show();
     $('.nav__other').removeClass('show').html("");
