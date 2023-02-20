@@ -5,57 +5,21 @@ $current_post_id = ( isset($post->ID) && $post->ID ) ? $post->ID : '';
 $current_url = ($current_post_id) ? get_permalink($current_post_id) : '';
 $current_url = ($current_url) ? rtrim($current_url,"/") : '';
 
-$parents = get_field("parent_menu","option");
+$parents = get_field("parent_menu_center","option");
 $childenMenuItems = array();
 
 $secondary_menu = get_field("secondary_menu","option");
 
-$whitewater_visibility = get_field("whitewater_visibility","option");
-$center_visibility = get_field("center_visibility","option");
-$pisgah_visibility = get_field("pisgah_visibility","option");
-$santee_visibility = get_field("santee_visibility","option");
-$grayson_visibility = get_field("grayson_visibility","option");
-
 if($parents) { ?>
 
-<div id="site-navigationc" class="corpnav defaultNav">
-	<a href="#" id="closeNav" class="closeNav"><span>x</span></a>
+<div id="site-navigationp" class="centernav">
+	<a href="#" id="closeNav" class="closeNav centerclose"><span>x</span></a>
 
-<?php if( $center_visibility=='show'||$pisgah_visibility=='show'||$santee_visibility=='show'||$grayson_visibility=='show' ): ?>
-	<div class="prenav">
-		<ul>
-  			<li class="sitelinks corplink active">
-  				<a href="#a" data-nav=".default">Whitewater</a>
-  			</li>
-      <?php if( $center_visibility == 'show' ) { ?>
-  			<li class="sitelinks centerlink ">
-  				<a href="#b" data-nav=".centernav">Center</a>
-  			</li>
-      <?php } ?>
-      <?php if( $pisgah_visibility == 'show' ) { ?>
-  			<li class="sitelinks pisgahlink ">
-  				<a href="#c" data-nav=".pisgahnav">Pisgah</a>
-  			</li>
-      <?php } ?>
-      <?php if( $santee_visibility == 'show' ) { ?>
-  			<li class="sitelinks santeelink ">
-  				<a href="#d" data-nav=".santeenav">Santee</a>
-  			</li>
-      <?php } ?>
-      <?php if( $grayson_visibility == 'show' ) { ?>
-        <li class="sitelinks graysonlink ">
-          <a href="#e" data-nav=".graysonnav">Grayson</a>
-        </li>
-      <?php } ?>
-		</ul>
-	</div>
-<?php endif; ?>
-	
 
-  <div class="navgroup nav__main">
+<div class="nav__content">
   	<?php //get_template_part('parts/prenav'); ?>
   	<div class="nav-inner">
-  		<nav class="navigation animated">
+  		<nav class="navigationz animated center">
   			<ul class="menu">
   				<?php $i=1; foreach ($parents as $p) { 
   					$parent_name = $p['parent_menu_name'];
@@ -129,15 +93,15 @@ if($parents) { ?>
   	<?php /* CHILDREN MENU */ 
   	if($childenMenuItems) { ?>
 
-  		<div id="childrenNavs" class="navigation-children navigation__children">
-  			<a href="#" id="closeNavChild" class="closeNav"><span>x</span></a>
+  		<div id="childrenNavs" class="navigation-children-center navigation__children">
+  			<a href="#" id="closeNavChild" class="closeNav centerclose"><span>x</span></a>
   			<div class="navchild-inner">
   				
   				<?php $c=1; foreach ($childenMenuItems as $k=>$ch) { 
   					$parent_name = $ch['parent_name'];
   					$childrenData = $ch['children_data'];
   					if($childrenData) { ?>
-  					<div class="children-group <?php echo $k ?>" data-parent="<?php echo $k ?>">
+  					<div class="children-group-center <?php echo $k ?>" data-parent="<?php echo $k ?>">
   						<div class="parent-name"><?php echo $parent_name ?></div>
   						<div class="children-menu-wrap">
   							<?php foreach ($childrenData as $e) { 
@@ -198,8 +162,6 @@ if($parents) { ?>
   	<?php } ?>
   </div>
 
-  <?php /* Nav container for another group of links */ ?>
-  <div class="navgroup nav__other" data-for=""></div>
 
 </div>
 
