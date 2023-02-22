@@ -257,14 +257,60 @@ jQuery(document).ready(function ($) {
     currentParent.addClass('active');
     $(this).addClass('active');
 
-    if ($(target).length) {
-      var navInnerContent = $(target).find('.nav__content').html();
-      $('.nav__main').hide();
-      $('.nav__other').html(navInnerContent);
-      $('.nav__other').addClass('show');
-      $('.nav__other').attr('data-for', linkName);
+    if (target == '.default') {
+      /* If hashtag points to specific element, add your custom function to hashtag click event.
+       * look for ==> $('a[href*="#"]:not([href="#"])').click(function () {}
+      */
+      if (url == '#') {
+        resetDefaultNavs($(this));
+      }
+    } else {
+      if ($(target).length) {
+        var navInnerContent = $(target).find('.nav__content').html();
+        $('.nav__main').hide();
+        $('.nav__other').html(navInnerContent);
+        $('.nav__other').addClass('show');
+        $('.nav__other').attr('data-for', linkName);
+      }
     }
   });
+  /* Smooth Scrolling */
+
+  $('a[href*="#"]:not([href="#"])').click(function () {
+    var headHeight = $("#masthead").height();
+    var offset = headHeight + 80;
+    resetDefaultNavs($(this));
+
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - offset
+        }, 1000);
+        return false;
+      }
+    }
+  });
+  /* When clicking the link with data-nav='.default', children links go back to default */
+
+  function resetDefaultNavs(selector) {
+    if (selector.attr('data-nav') != undefined) {
+      if (selector.attr('data-nav') == '.default') {
+        $('.navgroup.nav__main').show();
+        $('.navgroup.nav__other').removeClass('show');
+        $('.navgroup.nav__other').attr('data-for', "");
+        $('.prenav li.sitelinks').removeClass("active");
+        $(".defaultNav li.parent-link").removeClass("active");
+        $(".defaultNav li.parent-link a.parentlink").removeClass("active");
+        $('.navigation__children').removeClass("open");
+        $('.navigation__children .navchild-inner [data-parent]').removeClass("open");
+        selector.addClass('active');
+        selector.parent().addClass('active');
+      }
+    }
+  }
   /* 
   	Other menu items 
   
@@ -394,6 +440,7 @@ jQuery(document).ready(function ($) {
   	Other menu items END
   
   */
+
 
   $('[data-fancybox]').fancybox({
     touch: true,
@@ -611,22 +658,6 @@ jQuery(document).ready(function ($) {
         }
       } else {
         $(".topinfo .today").removeClass("open");
-      }
-    }
-  });
-  $('a[href*="#"]:not([href="#"])').click(function () {
-    var headHeight = $("#masthead").height();
-    var offset = headHeight + 80;
-
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top - offset
-        }, 1000);
-        return false;
       }
     }
   });
@@ -856,44 +887,37 @@ jQuery(document).ready(function ($) {
   if ($(".explore-other-stuff").length > 0) {
     var totalEntries = $(".explore-other-stuff .entry").length;
     $(".explore-other-stuff .post-type-entries").addClass('column-list-' + totalEntries);
-  }
-  /* Ajax Load More */
+  } // $('a[href*="#"]:not([href="#"])').click(function () {
+  //   var headHeight = $("#masthead").height();
+  //   var offset = headHeight + 80;
+  //   /* Detect if a link is from a navigation */
+  //   /* If Default "Whitewater" is clicked from the Nav, reset navs */
+  //   if ($(this).attr('data-nav') != undefined) {
+  //     if ($(this).attr('data-nav') == '.default') {
+  //       $('.navgroup.nav__main').show();
+  //       $('.navgroup.nav__other').removeClass('show');
+  //       $('.navgroup.nav__other').attr('data-for', "");
+  //       $('.prenav li.sitelinks').removeClass("active");
+  //       $(".defaultNav li.parent-link").removeClass("active");
+  //       $(".defaultNav li.parent-link a.parentlink").removeClass("active");
+  //       $('.navigation__children').removeClass("open");
+  //       $('.navigation__children .navchild-inner [data-parent]').removeClass("open");
+  //       $(this).addClass('active');
+  //       $(this).parent().addClass('active');
+  //     }
+  //   }
+  //   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+  //     var target = $(this.hash);
+  //     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+  //     if (target.length) {
+  //       $('html, body').animate({
+  //         scrollTop: target.offset().top - offset
+  //       }, 1000);
+  //       return false;
+  //     }
+  //   }
+  // });
 
-
-  $('a[href*="#"]:not([href="#"])').click(function () {
-    var headHeight = $("#masthead").height();
-    var offset = headHeight + 80;
-    /* Detect if a link is from a navigation */
-
-    /* If Default "Whitewater" is clicked from the Nav, reset navs */
-
-    if ($(this).attr('data-nav') != undefined) {
-      if ($(this).attr('data-nav') == '.default') {
-        $('.navgroup.nav__main').show();
-        $('.navgroup.nav__other').removeClass('show');
-        $('.navgroup.nav__other').attr('data-for', "");
-        $('.prenav li.sitelinks').removeClass("active");
-        $(".defaultNav li.parent-link").removeClass("active");
-        $(".defaultNav li.parent-link a.parentlink").removeClass("active");
-        $('.navigation__children').removeClass("open");
-        $('.navigation__children .navchild-inner [data-parent]').removeClass("open");
-        $(this).addClass('active');
-        $(this).parent().addClass('active');
-      }
-    }
-
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: target.offset().top - offset
-        }, 1000);
-        return false;
-      }
-    }
-  });
 
   if (typeof params.pid != 'undefined' && params.pid != null) {
     if ($(".faqpid-" + params.pid).length > 0) {
@@ -1014,38 +1038,41 @@ jQuery(document).ready(function ($) {
     $(".select2-container--default").css("width", w + "px");
   });
   /* Smooth Scrolling */
-
-  $('a[href*="#"]') // Remove links that don't actually link to anything
-  .not('[href="#"]').not('[href="#0"]').click(function (event) {
-    // On-page links
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']'); // Does a scroll target exist?
-
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function () {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target); //$target.focus();
-
-          if ($target.is(":focus")) {
-            // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-            //$target.focus(); // Set focus again
-          }
-
-          ;
-        });
-      }
-    }
-  });
+  // $('a[href*="#"]')
+  //   // Remove links that don't actually link to anything
+  //   .not('[href="#"]')
+  //   .not('[href="#0"]')
+  //   .click(function(event) {
+  //     // On-page links
+  //     if (
+  //       location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+  //       && 
+  //       location.hostname == this.hostname
+  //     ) {
+  //       // Figure out element to scroll to
+  //       var target = $(this.hash);
+  //       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+  //       // Does a scroll target exist?
+  //       if (target.length) {
+  //         // Only prevent default if animation is actually gonna happen
+  //         event.preventDefault();
+  //         $('html, body').animate({
+  //           scrollTop: target.offset().top
+  //         }, 1000, function() {
+  //           // Callback after animation
+  //           // Must change focus!
+  //           var $target = $(target);
+  //           //$target.focus();
+  //           if ($target.is(":focus")) { // Checking if the target was focused
+  //             return false;
+  //           } else {
+  //             $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+  //             //$target.focus(); // Set focus again
+  //           };
+  //         });
+  //       }
+  //     }
+  // });
 
   Isotope.Item.prototype._create = function () {
     // assign id, used for original-order sorting
