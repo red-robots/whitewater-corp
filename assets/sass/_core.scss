@@ -456,7 +456,7 @@ body.scrolled .navbar {
 }
 
 // #site-navigation
-.corpnav, .pisgahnav, .santeenav, .centernav {
+.corpnav, .pisgahnav, .santeenav, .centernav, .graysonnav {
 	position: fixed;
 	top: 30px;
 	right: -$nav_width;
@@ -569,7 +569,8 @@ body.scrolled .navbar {
 .navigation-children,
 .navigation-children-pisgah,
 .navigation-children-santee,
-.navigation-children-center {
+.navigation-children-center,
+.navigation-children-grayson {
 	position: fixed;
 	top: 0;
 	right: $nav_width;
@@ -635,7 +636,8 @@ body.scrolled .navbar {
 	.children-group,
 	.children-group-pisgah,
 	.children-group-santee,
-	.children-group-center {
+	.children-group-center,
+	.children-group-grayson {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -13208,7 +13210,7 @@ body.single-race .filter-wrapper {
 
 @media screen and (max-width: 799px) {
 	// #site-navigation
-	.corpnav, .pisgahnav, .santeenav, .centernav {
+	.corpnav, .pisgahnav, .santeenav, .centernav, .graysonnav {
 		&.open {
 			max-width: 100%;
 		}
@@ -13216,7 +13218,8 @@ body.single-race .filter-wrapper {
 	.navigation-children,
 	.navigation-children-pisgah,
 	.navigation-children-santee,
-	.navigation-children-center {
+	.navigation-children-center,
+	.navigation-children-grayson {
 		&.open {
 			right: 0;
 			max-width: 100%;
@@ -13228,7 +13231,7 @@ body.single-race .filter-wrapper {
 		z-index: 3000;
 	}
 	// #site-navigation.child-open
-	.corpnav, .pisgahnav, .santeenav, .centernav {
+	.corpnav, .pisgahnav, .santeenav, .centernav, .graysonnav {
 		&.child-open {
 			.closeNav {
 				border: 1px solid $red;
@@ -13250,8 +13253,9 @@ body.single-race .filter-wrapper {
 	body.logged-in.admin-bar {
 		.navigation-children .children-group.open,
 		.navigation-children-pisgah .children-group-pisgah.open,
-		.navigation-children-santee .children-group-santee.open
-		.navigation-children-center .children-group-center.open {
+		.navigation-children-santee .children-group-santee.open,
+		.navigation-children-center .children-group-center.open,
+		.navigation-children-grayson .children-group-grayson.open {
 			padding-top: 14vh;
 		}
 	}
@@ -13358,7 +13362,7 @@ body.logged-in.admin-bar {
 			top: 65px;
 		}
 		// #site-navigation .nav-inner
-		.corpnav, .pisgahnav, .santeenav, .centernav {
+		.corpnav, .pisgahnav, .santeenav, .centernav, .graysonnav {
 			&.nav-inner {
 				padding-top: 15vh;
 			}

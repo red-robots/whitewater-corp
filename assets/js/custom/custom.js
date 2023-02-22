@@ -267,6 +267,7 @@ Reference: http://jsfiddle.net/BB3JK/47/
     $('.prenav a[data-nav]').parent().not(currentParent).removeClass('active');
     currentParent.addClass('active');
     $(this).addClass('active');
+    console.log(target);
 
     if(target=='.default') {
     /* If hashtag points to specific element, add your custom function to hashtag click event.
