@@ -1472,7 +1472,7 @@ a:hover{color:#dd8698}
 .navbar .logo img{height:auto}
 body.scrolled .navbar{background:rgba(255,255,255,0.95)}
 #overlay{width:100%;height:100%;position:fixed;top:0;left:0;z-index:999;background:rgba(0,0,0,0.45);display:none;-webkit-animation-duration:.5s;animation-duration:.5s}
-.corpnav,.pisgahnav,.santeenav,.centernav,.graysonnav{position:fixed;top:30px;right:-450px;max-width:450px;width:100%;height:100%;z-index:-99;-webkit-transform:translateX(120%);transform:translateX(120%);-webkit-transition:all ease .3s;transition:all ease .3s;-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden;-webkit-animation-duration:1s;animation-duration:1s}
+.corpnav,.pisgahnav,.santeenav,.centernav,.graysonnav{position:fixed;top:30px;right:-485px;max-width:485px;width:100%;height:100%;z-index:-99;-webkit-transform:translateX(120%);transform:translateX(120%);-webkit-transition:all ease .3s;transition:all ease .3s;-webkit-backface-visibility:hidden;backface-visibility:hidden;overflow:hidden;-webkit-animation-duration:1s;animation-duration:1s}
 .corpnav.open,.pisgahnav.open,.santeenav.open,.centernav.open,.graysonnav.open{-webkit-transform:translateX(0);transform:translateX(0);width:100%;-webkit-box-shadow:-1px 4px 30px rgba(0,0,0,0.3);box-shadow:-1px 4px 30px rgba(0,0,0,0.3);overflow:visible;right:0;z-index:9999;-webkit-animation-name:"fadeIn";animation-name:"fadeIn"}
 .corpnav .nav-inner,.pisgahnav .nav-inner,.santeenav .nav-inner,.centernav .nav-inner,.graysonnav .nav-inner{background:rgba(186,13,48,0.95);padding:90px 0 50px;height:100%;overflow-x:hidden;overflow-y:auto;position:relative;z-index:20}
 .corpnav .navigation,.pisgahnav .navigation,.santeenav .navigation,.centernav .navigation,.graysonnav .navigation{display:block;width:100%;text-align:center}
@@ -1486,7 +1486,7 @@ body.scrolled .navbar{background:rgba(255,255,255,0.95)}
 .corpnav ul.menu>li>a span:before,.pisgahnav ul.menu>li>a span:before,.santeenav ul.menu>li>a span:before,.centernav ul.menu>li>a span:before,.graysonnav ul.menu>li>a span:before{width:9px;height:1px}
 .corpnav ul.menu>li>a span:after,.pisgahnav ul.menu>li>a span:after,.santeenav ul.menu>li>a span:after,.centernav ul.menu>li>a span:after,.graysonnav ul.menu>li>a span:after{height:9px;width:1px;margin-top:-4px;margin-right:4px}
 .corpnav ul.menu>li.active:after,.corpnav ul.menu>li:hover:after,.pisgahnav ul.menu>li.active:after,.pisgahnav ul.menu>li:hover:after,.santeenav ul.menu>li.active:after,.santeenav ul.menu>li:hover:after,.centernav ul.menu>li.active:after,.centernav ul.menu>li:hover:after,.graysonnav ul.menu>li.active:after,.graysonnav ul.menu>li:hover:after{opacity:1;width:100%}
-.navigation-children,.navigation-children-pisgah,.navigation-children-santee,.navigation-children-center,.navigation-children-grayson{position:fixed;top:0;right:450px;width:0;height:100%;-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.navigation-children,.navigation-children-pisgah,.navigation-children-santee,.navigation-children-center,.navigation-children-grayson{position:fixed;top:0;right:485px;width:0;height:100%;-webkit-backface-visibility:hidden;backface-visibility:hidden}
 .navigation-children .navchild-inner,.navigation-children-pisgah .navchild-inner,.navigation-children-santee .navchild-inner,.navigation-children-center .navchild-inner,.navigation-children-grayson .navchild-inner{width:100%;height:100%;position:relative;z-index:99;overflow-x:hidden;overflow-y:auto}
 .navigation-children .children-menu-wrap,.navigation-children-pisgah .children-menu-wrap,.navigation-children-santee .children-menu-wrap,.navigation-children-center .children-menu-wrap,.navigation-children-grayson .children-menu-wrap{-webkit-column-count:2;-moz-column-count:2;column-count:2}
 .navigation-children .children-menu-content,.navigation-children-pisgah .children-menu-content,.navigation-children-santee .children-menu-content,.navigation-children-center .children-menu-content,.navigation-children-grayson .children-menu-content{margin-bottom:10px;padding:15px}
@@ -1498,7 +1498,7 @@ body.scrolled .navbar{background:rgba(255,255,255,0.95)}
 .navigation-children .submenu li.current_page_item>a,.navigation-children-pisgah .submenu li.current_page_item>a,.navigation-children-santee .submenu li.current_page_item>a,.navigation-children-center .submenu li.current_page_item>a,.navigation-children-grayson .submenu li.current_page_item>a{color:#ba0d30}
 .navigation-children .children-group,.navigation-children .children-group-pisgah,.navigation-children .children-group-santee,.navigation-children .children-group-center,.navigation-children .children-group-grayson,.navigation-children-pisgah .children-group,.navigation-children-pisgah .children-group-pisgah,.navigation-children-pisgah .children-group-santee,.navigation-children-pisgah .children-group-center,.navigation-children-pisgah .children-group-grayson,.navigation-children-santee .children-group,.navigation-children-santee .children-group-pisgah,.navigation-children-santee .children-group-santee,.navigation-children-santee .children-group-center,.navigation-children-santee .children-group-grayson,.navigation-children-center .children-group,.navigation-children-center .children-group-pisgah,.navigation-children-center .children-group-santee,.navigation-children-center .children-group-center,.navigation-children-center .children-group-grayson,.navigation-children-grayson .children-group,.navigation-children-grayson .children-group-pisgah,.navigation-children-grayson .children-group-santee,.navigation-children-grayson .children-group-center,.navigation-children-grayson .children-group-grayson{position:absolute;top:0;left:0;background:rgba(255,255,255,0.95);-webkit-box-shadow:-1px 4px 30px rgba(0,0,0,0.2);box-shadow:-1px 4px 30px rgba(0,0,0,0.2);padding:75px 30px 80px;width:100%;height:100%;overflow-x:hidden;overflow-y:auto;display:none;-webkit-animation-duration:.5s;animation-duration:.5s}
 .navigation-children .children-group.open,.navigation-children .children-group-pisgah.open,.navigation-children .children-group-santee.open,.navigation-children .children-group-center.open,.navigation-children .children-group-grayson.open,.navigation-children-pisgah .children-group.open,.navigation-children-pisgah .children-group-pisgah.open,.navigation-children-pisgah .children-group-santee.open,.navigation-children-pisgah .children-group-center.open,.navigation-children-pisgah .children-group-grayson.open,.navigation-children-santee .children-group.open,.navigation-children-santee .children-group-pisgah.open,.navigation-children-santee .children-group-santee.open,.navigation-children-santee .children-group-center.open,.navigation-children-santee .children-group-grayson.open,.navigation-children-center .children-group.open,.navigation-children-center .children-group-pisgah.open,.navigation-children-center .children-group-santee.open,.navigation-children-center .children-group-center.open,.navigation-children-center .children-group-grayson.open,.navigation-children-grayson .children-group.open,.navigation-children-grayson .children-group-pisgah.open,.navigation-children-grayson .children-group-santee.open,.navigation-children-grayson .children-group-center.open,.navigation-children-grayson .children-group-grayson.open{display:block;-webkit-animation-name:fadeInRight;animation-name:fadeInRight}
-.navigation-children.open,.navigation-children-pisgah.open,.navigation-children-santee.open,.navigation-children-center.open,.navigation-children-grayson.open{width:550px}
+.navigation-children.open,.navigation-children-pisgah.open,.navigation-children-santee.open,.navigation-children-center.open,.navigation-children-grayson.open{width:585px}
 .navigation-children .parent-name,.navigation-children-pisgah .parent-name,.navigation-children-santee .parent-name,.navigation-children-center .parent-name,.navigation-children-grayson .parent-name{display:none}
 .secondary-menu{padding:35px 50px 20px}
 .secondary-menu ul.menu2{margin:0;padding:0;list-style:none}
@@ -1510,7 +1510,9 @@ body.scrolled .navbar{background:rgba(255,255,255,0.95)}
 .nav__main,.nav__other{height:100%}
 .nav__other.show .navigationz{-webkit-animation-name:"fadeIn";animation-name:"fadeIn"}
 .closeNav{display:block;width:25px;height:25px;color:#FFF;text-align:center;border:1px solid #FFF;border-radius:100px;position:absolute;top:30px;right:30px;-webkit-transition:all ease .3s;transition:all ease .3s;overflow:hidden;z-index:100}
-.closeNav#closeNavChild{display:none}
+.closeNav#closeNavChild{display:none;z-index:4000}
+.closeNav#closeNavChild.red{color:#ba0d30;border:1px solid #ba0d30}
+.closeNav#closeNavChild.red span:before,.closeNav#closeNavChild.red span:after{background:#ba0d30}
 .closeNav span{display:block;width:100%;height:100%;text-indent:-999em;position:relative}
 .closeNav span:before,.closeNav span:after{content:"";display:block;width:66%;height:2px;background:#FFF;position:absolute;top:10px;left:4px;-webkit-transition:all ease .3s;transition:all ease .3s}
 .closeNav span:before{-webkit-transform:rotate(45deg);transform:rotate(45deg)}
@@ -3509,8 +3511,8 @@ input.nav-search{width:100%;border:0;height:30px;border-radius:15px;background-c
 .prenav ul{margin:0;padding:0}
 .prenav li{margin:20px 0;display:block}
 .prenav li.active a{background-color:rgba(255,255,255,0.2)}
-.prenav li.umbrella{text-indent:-9000px;background-image:url(images/nav-logo.png);background-position:center center;background-size:30px 24px;background-repeat:no-repeat}
-.prenav a{color:#fff;padding:8px 20px;text-decoration:none;font-size:16px;font-weight:bold;text-transform:uppercase;display:block}
+.prenav li.umbrella{text-indent:-9000px;background-image:url(images/nav-logo-2.png);background-position:center center;background-size:100px 15px;background-repeat:no-repeat}
+.prenav a{color:#fff;padding:8px 28px;text-decoration:none;font-size:16px;font-weight:bold;text-transform:uppercase;display:block}
 @media screen and (max-device-width:1024px){.featured-events-section{background-color:#FFF}
 .featured-events-section .flexwrap{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 .featured-events-section .postbox{width:50%;float:left}
@@ -3840,11 +3842,14 @@ body.single-festival .filter-wrapper.filterstyle .select-wrap{width:75%}
 #timeline-area.timeline-wrapper .timeline .middle-line{width:50%}
 #timeline-area.timeline-wrapper .timeline .middle-line:before{content:"";display:block;width:25px;height:25px;border-radius:50%;background-color:#ba0d30;position:absolute;top:-10px;right:-12.5px}
 #timeline-area.timeline-wrapper .timeline .middle-line:after{content:"";display:block;width:7vw;border-bottom:2px solid #ba0d30;position:absolute;bottom:0;right:0;margin-right:-3.5vw;margin-bottom:-1.2vw}
-}@media screen and (min-width:820px){.filter-wrapper.filterstyle .flexwrapfilters{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+}@media screen and (min-width:820px){.closeNav#closeNavChild{display:none}
+.filter-wrapper.filterstyle .flexwrapfilters{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .double-filter-wrapper .inside{width:45%;float:left;padding:2.5%}
 .double-filter-wrapper .filter-wrapper .select,.double-filter-wrapper .filter-wrapper .select-wrap.align-middle{width:100%}
 .cf-forms{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .cont-icon-wrap .cicon{-ms-flex-preferred-size:22%;flex-basis:22%;width:22%;max-width:100px}
+.prenav li.umbrella{background-size:150px 23px}
+.prenav a{padding:8px 60px}
 }@media(min-width:960px){.topinfo span.el{font-size:12px}
 #banner.taxonomy-banner .static-banner{height:650px}
 .home-video-gallery.count1 .video-big{height:600px}

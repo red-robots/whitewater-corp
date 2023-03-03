@@ -220,12 +220,15 @@ Reference: http://jsfiddle.net/BB3JK/47/
 		$(".children-group").removeClass("open");
 		$(".corpnav li.parent-link").removeClass("active");
 		$(".corpnav").removeClass("child-open");
+		$(this).removeClass('red');
 	});
+	
 
 	$(document).on("click",".defaultNav .has-children a.parentlink", function(e){
 		e.preventDefault();
 		var link = $(this).attr("href");
 		if(link=='#') {
+
 
       $(".defaultNav li.parent-link").removeClass("active");
       $(".defaultNav li.parent-link a.parentlink").removeClass("active");
@@ -241,6 +244,7 @@ Reference: http://jsfiddle.net/BB3JK/47/
       if( parent.find('.navigation__children '+child_menu).length > 0 ) {
         parent.find('.navigation__children').addClass('open');
         parent.find('.navigation__children '+child_menu).addClass("open");
+        $('#closeNavChild').addClass('red');
       }
         
       // $(".corpnav li.parent-link").removeClass("active");
@@ -284,6 +288,7 @@ Reference: http://jsfiddle.net/BB3JK/47/
         $('.nav__other').html(navInnerContent);
         $('.nav__other').addClass('show');
         $('.nav__other').attr('data-for', linkName);
+
       } 
     }
 

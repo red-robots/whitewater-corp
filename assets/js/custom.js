@@ -216,6 +216,7 @@ jQuery(document).ready(function ($) {
     $(".children-group").removeClass("open");
     $(".corpnav li.parent-link").removeClass("active");
     $(".corpnav").removeClass("child-open");
+    $(this).removeClass('red');
   });
   $(document).on("click", ".defaultNav .has-children a.parentlink", function (e) {
     e.preventDefault();
@@ -234,6 +235,7 @@ jQuery(document).ready(function ($) {
       if (parent.find('.navigation__children ' + child_menu).length > 0) {
         parent.find('.navigation__children').addClass('open');
         parent.find('.navigation__children ' + child_menu).addClass("open");
+        $('#closeNavChild').addClass('red');
       } // $(".corpnav li.parent-link").removeClass("active");
       // $(".children-group").removeClass("open");
       // if( $(".children-group"+child_menu).length > 0 ) {

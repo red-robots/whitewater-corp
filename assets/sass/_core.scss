@@ -730,7 +730,28 @@ body.scrolled .navbar {
 	z-index: 100;
 	&#closeNavChild {
 		display: none;
+		z-index: 4000;
+		@media screen and (min-width: $tabwidth) {
+			display: none;
+		}
+		&.red {
+			color: #BA0D30;
+			border: 1px solid #BA0D30;
+			span {
+				&:before, &:after {
+					background: #BA0D30;
+				}
+			}
+		}
 	}
+	// &.red {
+	// 	color: rgba(186, 13, 48, 0.95);
+	// 	border: 1px solid rgba(186, 13, 48, 0.95);
+	// 	@media screen and (min-width: $tabwidth) {
+	// 		color: #fff;
+	// 		border: 1px solid #fff;
+	// 	}
+	// }
 	span {
 		display: block;
 		width: 100%;
@@ -13229,6 +13250,7 @@ body.single-race .filter-wrapper {
 	}
 	.closeNav {
 		z-index: 3000;
+		// z-index: 999;
 	}
 	// #site-navigation.child-open
 	.corpnav, .pisgahnav, .santeenav, .centernav, .graysonnav {
@@ -14249,24 +14271,25 @@ input.nav-search {
 		}
 		&.umbrella {
 			text-indent: -9000px;
-			background-image: url(images/nav-logo.png);
+			background-image: url(images/nav-logo-2.png);
 			background-position: center center;
-			background-size: 30px 24px;
+			background-size: 100px 15px;
 			background-repeat: no-repeat;
+			@media screen and (min-width: $tabwidth) {
+				background-size: 150px 23px;
+			}
 		}
 	}
 	a {
 		color: #fff;
-		padding: 8px 20px;
+		padding: 8px 28px;
 		text-decoration: none;
 		font-size: 16px;
 		font-weight: bold;
 		text-transform: uppercase;
 		display: block;
-	}
-}
-.open {
-	.prenav li {
-
+		@media screen and (min-width: $tabwidth) {
+			padding: 8px 60px;
+		}
 	}
 }
