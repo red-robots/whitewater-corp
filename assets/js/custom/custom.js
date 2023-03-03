@@ -262,6 +262,7 @@ Reference: http://jsfiddle.net/BB3JK/47/
   $(document).on('click','.prenav .sitelinks a[data-nav]', function(e){
     e.preventDefault();
     var currentParent = $(this).parent();
+    var url = $(this).attr('href');
     var target = $(this).attr('data-nav');
     var linkName = $(this).text().trim();
     $('.prenav a[data-nav]').parent().not(currentParent).removeClass('active');
@@ -961,40 +962,40 @@ $(window).resize(function(){
 	}
 
 
-  // $('a[href*="#"]:not([href="#"])').click(function () {
-  //   var headHeight = $("#masthead").height();
-  //   var offset = headHeight + 80;
-  //   /* Detect if a link is from a navigation */
+  $('a[href*="#"]:not([href="#"])').click(function () {
+    var headHeight = $("#masthead").height();
+    var offset = headHeight + 80;
+    /* Detect if a link is from a navigation */
 
-  //   /* If Default "Whitewater" is clicked from the Nav, reset navs */
+    /* If Default "Whitewater" is clicked from the Nav, reset navs */
 
-  //   if ($(this).attr('data-nav') != undefined) {
-  //     if ($(this).attr('data-nav') == '.default') {
-  //       $('.navgroup.nav__main').show();
-  //       $('.navgroup.nav__other').removeClass('show');
-  //       $('.navgroup.nav__other').attr('data-for', "");
-  //       $('.prenav li.sitelinks').removeClass("active");
-  //       $(".defaultNav li.parent-link").removeClass("active");
-  //       $(".defaultNav li.parent-link a.parentlink").removeClass("active");
-  //       $('.navigation__children').removeClass("open");
-  //       $('.navigation__children .navchild-inner [data-parent]').removeClass("open");
-  //       $(this).addClass('active');
-  //       $(this).parent().addClass('active');
-  //     }
-  //   }
+    if ($(this).attr('data-nav') != undefined) {
+      if ($(this).attr('data-nav') == '.default') {
+        $('.navgroup.nav__main').show();
+        $('.navgroup.nav__other').removeClass('show');
+        $('.navgroup.nav__other').attr('data-for', "");
+        $('.prenav li.sitelinks').removeClass("active");
+        $(".defaultNav li.parent-link").removeClass("active");
+        $(".defaultNav li.parent-link a.parentlink").removeClass("active");
+        $('.navigation__children').removeClass("open");
+        $('.navigation__children .navchild-inner [data-parent]').removeClass("open");
+        $(this).addClass('active');
+        $(this).parent().addClass('active');
+      }
+    }
 
-  //   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-  //     var target = $(this.hash);
-  //     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
-  //     if (target.length) {
-  //       $('html, body').animate({
-  //         scrollTop: target.offset().top - offset
-  //       }, 1000);
-  //       return false;
-  //     }
-  //   }
-  // });
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - offset
+        }, 1000);
+        return false;
+      }
+    }
+  });
 
 
 

@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof2(obj) { "@babel/helpers - typeof"; return _typeof2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof2(obj); }
+function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -251,6 +251,7 @@ jQuery(document).ready(function ($) {
   $(document).on('click', '.prenav .sitelinks a[data-nav]', function (e) {
     e.preventDefault();
     var currentParent = $(this).parent();
+    var url = $(this).attr('href');
     var target = $(this).attr('data-nav');
     var linkName = $(this).text().trim();
     $('.prenav a[data-nav]').parent().not(currentParent).removeClass('active');
@@ -887,37 +888,42 @@ jQuery(document).ready(function ($) {
   if ($(".explore-other-stuff").length > 0) {
     var totalEntries = $(".explore-other-stuff .entry").length;
     $(".explore-other-stuff .post-type-entries").addClass('column-list-' + totalEntries);
-  } // $('a[href*="#"]:not([href="#"])').click(function () {
-  //   var headHeight = $("#masthead").height();
-  //   var offset = headHeight + 80;
-  //   /* Detect if a link is from a navigation */
-  //   /* If Default "Whitewater" is clicked from the Nav, reset navs */
-  //   if ($(this).attr('data-nav') != undefined) {
-  //     if ($(this).attr('data-nav') == '.default') {
-  //       $('.navgroup.nav__main').show();
-  //       $('.navgroup.nav__other').removeClass('show');
-  //       $('.navgroup.nav__other').attr('data-for', "");
-  //       $('.prenav li.sitelinks').removeClass("active");
-  //       $(".defaultNav li.parent-link").removeClass("active");
-  //       $(".defaultNav li.parent-link a.parentlink").removeClass("active");
-  //       $('.navigation__children').removeClass("open");
-  //       $('.navigation__children .navchild-inner [data-parent]').removeClass("open");
-  //       $(this).addClass('active');
-  //       $(this).parent().addClass('active');
-  //     }
-  //   }
-  //   if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-  //     var target = $(this.hash);
-  //     target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-  //     if (target.length) {
-  //       $('html, body').animate({
-  //         scrollTop: target.offset().top - offset
-  //       }, 1000);
-  //       return false;
-  //     }
-  //   }
-  // });
+  }
 
+  $('a[href*="#"]:not([href="#"])').click(function () {
+    var headHeight = $("#masthead").height();
+    var offset = headHeight + 80;
+    /* Detect if a link is from a navigation */
+
+    /* If Default "Whitewater" is clicked from the Nav, reset navs */
+
+    if ($(this).attr('data-nav') != undefined) {
+      if ($(this).attr('data-nav') == '.default') {
+        $('.navgroup.nav__main').show();
+        $('.navgroup.nav__other').removeClass('show');
+        $('.navgroup.nav__other').attr('data-for', "");
+        $('.prenav li.sitelinks').removeClass("active");
+        $(".defaultNav li.parent-link").removeClass("active");
+        $(".defaultNav li.parent-link a.parentlink").removeClass("active");
+        $('.navigation__children').removeClass("open");
+        $('.navigation__children .navchild-inner [data-parent]').removeClass("open");
+        $(this).addClass('active');
+        $(this).parent().addClass('active');
+      }
+    }
+
+    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top - offset
+        }, 1000);
+        return false;
+      }
+    }
+  });
 
   if (typeof params.pid != 'undefined' && params.pid != null) {
     if ($(".faqpid-" + params.pid).length > 0) {

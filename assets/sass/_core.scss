@@ -14247,6 +14247,13 @@ input.nav-search {
 		&.active a {
 			background-color: rgba(#fff, .2);
 		}
+		&.umbrella {
+			text-indent: -9000px;
+			background-image: url(images/nav-logo.png);
+			background-position: center center;
+			background-size: 30px 24px;
+			background-repeat: no-repeat;
+		}
 	}
 	a {
 		color: #fff;
