@@ -25,26 +25,26 @@ if($parents) { ?>
 	<div class="prenav">
 		<ul>
   			<li class="sitelinks corplink active">
-  				<a href="#a" data-nav=".default">Whitewater</a>
+  				<a href="javascript:void(0)" data-nav=".default">Whitewater</a>
   			</li>
       <?php if( $center_visibility == 'show' ) { ?>
   			<li class="sitelinks centerlink ">
-  				<a href="#b" data-nav=".centernav">Center</a>
+  				<a href="javascript:void(0)" data-nav=".centernav">Center</a>
   			</li>
       <?php } ?>
       <?php if( $pisgah_visibility == 'show' ) { ?>
   			<li class="sitelinks pisgahlink ">
-  				<a href="#c" data-nav=".pisgahnav">Pisgah</a>
+  				<a href="javascript:void(0)" data-nav=".pisgahnav">Pisgah</a>
   			</li>
       <?php } ?>
       <?php if( $santee_visibility == 'show' ) { ?>
   			<li class="sitelinks santeelink ">
-  				<a href="#d" data-nav=".santeenav">Santee</a>
+  				<a href="javascript:void(0)" data-nav=".santeenav">Santee</a>
   			</li>
       <?php } ?>
       <?php if( $grayson_visibility == 'show' ) { ?>
         <li class="sitelinks graysonlink ">
-          <a href="#e" data-nav=".graysonnav">Grayson</a>
+          <a href="javascript:void(0)" data-nav=".graysonnav">Grayson</a>
         </li>
       <?php } ?>
 		</ul>
