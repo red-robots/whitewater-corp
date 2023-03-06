@@ -94,7 +94,7 @@ if($parents) { ?>
   	if($childenMenuItems) { ?>
 
   		<div id="childrenNavs" class="navigation-children-center navigation__children">
-  			<a href="#" id="closeNavChild" class="closeNav centerclose"><span>x</span></a>
+  			<a href="javascript:void(0)" class="childNavCloseBtn"><span>x</span></a>
   			<div class="navchild-inner">
   				
   				<?php $c=1; foreach ($childenMenuItems as $k=>$ch) { 

@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
+function _typeof2(obj) { "@babel/helpers - typeof"; return _typeof2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof2(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -234,8 +234,9 @@ jQuery(document).ready(function ($) {
 
       if (parent.find('.navigation__children ' + child_menu).length > 0) {
         parent.find('.navigation__children').addClass('open');
-        parent.find('.navigation__children ' + child_menu).addClass("open");
-        $('#closeNavChild').addClass('red');
+        parent.find('.navigation__children ' + child_menu).addClass("open"); //$('#closeNavChild').addClass('red');
+
+        $('#closeNav').addClass('hide');
       } // $(".corpnav li.parent-link").removeClass("active");
       // $(".children-group").removeClass("open");
       // if( $(".children-group"+child_menu).length > 0 ) {
@@ -247,6 +248,11 @@ jQuery(document).ready(function ($) {
       // }
 
     }
+  });
+  $(document).on("click", ".childNavCloseBtn", function (e) {
+    e.preventDefault();
+    $(this).parents('.navigation__children').removeClass('open');
+    $('#closeNav').removeClass('hide');
   });
   /* PREV NAV */
 

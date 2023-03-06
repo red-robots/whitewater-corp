@@ -229,7 +229,6 @@ Reference: http://jsfiddle.net/BB3JK/47/
 		var link = $(this).attr("href");
 		if(link=='#') {
 
-
       $(".defaultNav li.parent-link").removeClass("active");
       $(".defaultNav li.parent-link a.parentlink").removeClass("active");
       $('.navigation__children').removeClass("open");
@@ -244,7 +243,8 @@ Reference: http://jsfiddle.net/BB3JK/47/
       if( parent.find('.navigation__children '+child_menu).length > 0 ) {
         parent.find('.navigation__children').addClass('open');
         parent.find('.navigation__children '+child_menu).addClass("open");
-        $('#closeNavChild').addClass('red');
+        //$('#closeNavChild').addClass('red');
+        $('#closeNav').addClass('hide');
       }
         
       // $(".corpnav li.parent-link").removeClass("active");
@@ -257,9 +257,13 @@ Reference: http://jsfiddle.net/BB3JK/47/
 			// 	$(this).parents("li").addClass('active');
 			// }
 		}
-		
 	});
 
+  $(document).on("click",".childNavCloseBtn", function(e){
+    e.preventDefault();
+    $(this).parents('.navigation__children').removeClass('open');
+    $('#closeNav').removeClass('hide');
+  });
 
   
   /* PREV NAV */
