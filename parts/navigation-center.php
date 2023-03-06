@@ -61,6 +61,32 @@ if($parents) { ?>
 
   			<?php if ($secondary_menu) { ?>
   			<div class="secondary-menu">
+
+
+
+<ul class="menu2">
+<li>
+<a href="https://center.whitewater.org/plan-your-visit/calendar/" target="_self">
+<span>CALENDAR</span>
+<i class="navIcon far fa-calendar-alt"></i>
+</a>
+</li>
+<li>
+<a href="https://center.whitewater.org/plan-your-visit/facility-map/" target="_self">
+<span>FACILITY MAP</span>
+<i class="navIcon far fa-map"></i>
+</a>
+</li>
+<li>
+<a href="https://center.whitewater.org/plan-your-visit/daily-activity-schedule/" target="_self">
+<span>TODAY'S ACTIVITY SCHEDULE</span>
+<i class="navIcon ci-calendar"></i>
+</a>
+</li>
+</ul>
+<br><br>
+
+
   				<ul class="menu2">
   				<?php foreach ($secondary_menu as $sm) { 
   					$s = $sm['link'];
