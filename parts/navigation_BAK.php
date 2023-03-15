@@ -10,53 +10,49 @@ $childenMenuItems = array();
 
 $secondary_menu = get_field("secondary_menu","option");
 
-// $whitewater_visibility = get_field("whitewater_visibility","option");
-// $center_visibility = get_field("center_visibility","option");
-// $pisgah_visibility = get_field("pisgah_visibility","option");
-// $santee_visibility = get_field("santee_visibility","option");
-// $grayson_visibility = get_field("grayson_visibility","option");
+$whitewater_visibility = get_field("whitewater_visibility","option");
+$center_visibility = get_field("center_visibility","option");
+$pisgah_visibility = get_field("pisgah_visibility","option");
+$santee_visibility = get_field("santee_visibility","option");
+$grayson_visibility = get_field("grayson_visibility","option");
 
 
-$locations['whitewater'] = 'Whitewater';
-$locations['center'] = 'Center';
-$locations['pisgah'] = 'Pisgah';
-$locations['santee'] = 'Santee';
-$locations['grayson'] = 'Grayson';
-$preNavs = array();
-foreach ($locations as $slug => $name) { 
-  $visibility = get_field($slug . "_visibility","option");
-  if($slug=='whitewater') {
-    $visibility=='show';
-  }
-  if($visibility=='show') {
-    $preNavs[] = $slug;
-  }
-}
+$pisgah_sitelink = get_field("pisgah_sitelink","option");
 
 if($parents) { ?>
 
 <div id="site-navigationc" class="corpnav defaultNav">
 	<a href="#" id="closeNav" class="closeNav"><span>x</span></a>
 
-<?php if( $preNavs ) { ?>
+<?php if( $center_visibility=='show'||$pisgah_visibility=='show'||$santee_visibility=='show'||$grayson_visibility=='show' ): ?>
 	<div class="prenav">
 		<ul>
-      <?php foreach ($locations as $slug => $name) { 
-        $className = ($slug=='whitewater') ? 'corplink active umbrella' : $slug . 'link';
-        $dataNav = ($slug=='whitewater') ? 'default' : $slug.'nav';
-        $siteLink = get_field($slug . "_sitelink","option");
-        $visibility = ($slug=='whitewater') ? 'show' : get_field($slug . "_visibility","option");
-        
-        if( $visibility == 'show' ) { ?>
-          <li class="sitelinks <?php echo $className ?>">
-            <a href="javascript:void(0)" data-nav=".<?php echo $dataNav ?>" data-home="<?php echo $siteLink ?>"><?php echo $name ?></a>
-          </li>
-        <?php }
-        
-      } ?>
+  			<li class="sitelinks corplink active umbrella">
+  				<a href="#" data-nav=".default">Whitewater</a>
+  			</li>
+      <?php if( $center_visibility == 'show' ) { ?>
+  			<li class="sitelinks centerlink ">
+  				<a href="#" data-nav=".centernav">Center</a>
+  			</li>
+      <?php } ?>
+      <?php if( $pisgah_visibility == 'show' ) { ?>
+  			<li class="sitelinks pisgahlink ">
+  				<a href="#" data-nav=".pisgahnav" data-home="<?php echo $pisgah_sitelink ?>">Pisgah</a>
+  			</li>
+      <?php } ?>
+      <?php if( $santee_visibility == 'show' ) { ?>
+  			<li class="sitelinks santeelink ">
+  				<a href="#" data-nav=".santeenav">Santee</a>
+  			</li>
+      <?php } ?>
+      <?php if( $grayson_visibility == 'show' ) { ?>
+        <li class="sitelinks graysonlink ">
+          <a href="#" data-nav=".graysonnav">Grayson</a>
+        </li>
+      <?php } ?>
 		</ul>
 	</div>
-<?php } ?>
+<?php endif; ?>
 	
 
   <div class="navgroup nav__main">
