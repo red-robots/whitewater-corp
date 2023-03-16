@@ -8,30 +8,12 @@ $current_url = ($current_url) ? rtrim($current_url,"/") : '';
 $parents = get_field("parent_menu_santee","option");
 $childenMenuItems = array();
 
-$secondary_menu = get_field("secondary_menu","option");
+$secondary_menu_santee = get_field("secondary_menu_santee","option");
 
 if($parents) { ?>
 
 <div id="site-navigations" class="santeenav">
 	<a href="#" id="closeNav" class="closeNav santeeclose"><span>x</span></a>
-
-
-	<!-- <div class="prenav">
-		<ul>
-			<li class="sitelinks corplink ">
-				<a href="#a">Whitewater</a>
-			</li>
-			<li class="sitelinks centerlink ">
-				<a href="#b">Center</a>
-			</li>
-			<li class="sitelinks pisgahlink ">
-				<a href="#b">Pisgah</a>
-			</li>
-			<li class="sitelinks santeelink active">
-				<a href="#f">Santee</a>
-			</li>
-		</ul>
-	</div> -->
 
 	
   <div class="nav__content">
@@ -77,10 +59,10 @@ if($parents) { ?>
   			</ul>
   			<div class="squiggly"><div class="line"></div></div>
 
-  			<?php if ($secondary_menu) { ?>
+  			<?php if ($secondary_menu_santee) { ?>
   			<div class="secondary-menu">
   				<ul class="menu2">
-  				<?php foreach ($secondary_menu as $sm) { 
+  				<?php foreach ($secondary_menu_santee as $sm) { 
   					$s = $sm['link'];
   					$s_icon = $sm['icon_class'];
   					if($s) {
