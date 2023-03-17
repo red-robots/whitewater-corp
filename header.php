@@ -14,7 +14,7 @@ $post_id = $post->ID;
 $thumbId = get_post_thumbnail_id($post_id); 
 $featImg = wp_get_attachment_image_src($thumbId,'full'); ?>
 <!-- SOCIAL MEDIA META TAGS -->
-
+<meta name="p:domain_verify" content="e83439f2b3d98cad131ab8782461a8e2"/>
 <meta name="facebook-domain-verification" content="vcbl42j06vfl4vocp07qka3fcdtyir" />
 <meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
 <meta property="og:url"		content="<?php echo get_permalink(); ?>" />
@@ -30,6 +30,8 @@ $featImg = wp_get_attachment_image_src($thumbId,'full'); ?>
 var currentURL = '<?php echo get_permalink();?>';
 var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){params[k]=v});
 </script>
+
+<script>!function(e,t,n,s,a,c,p,i,o,u){e[a]||((i=e[a]=function(){i.process?i.process.apply(i,arguments):i.queue.push(arguments)}).queue=[],i.pixelId="cbd42ac9-c947-41a0-a340-cc2163106c8c",i.t=1*new Date,(o=t.createElement(n)).async=1,o.src="https://found.ee/dmp/pixel.js?t="+864e5*Math.ceil(new Date/864e5),(u=t.getElementsByTagName(n)[0]).parentNode.insertBefore(o,u))}(window,document,"script",0,"foundee");foundee('', 'Y');</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9PW6PHW0M8"></script>
