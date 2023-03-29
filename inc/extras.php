@@ -57,6 +57,22 @@ function get_rest_featured_image( $object, $field_name, $request ) {
     return false;
 }
 
+function add_race_to_api( $args, $post_type ) {
+    if ( 'race' === $post_type ) {
+        $args['show_in_rest'] = true;
+    }
+    return $args;
+}
+add_filter( 'register_post_type_args', 'add_race_to_api', 10, 2 );
+
+function add_activity_type_to_api( $args, $taxonomy ) {
+    if ( 'activity' === $taxonomy ) {
+        $args['show_in_rest'] = true;
+    }
+    return $args;
+}
+add_filter( 'register_taxonomy_args', 'add_activity_type_to_api', 10, 2 );
+
 
 function get_images_dir($fileName=null) {
     return get_bloginfo('template_url') . '/images/' . $fileName;

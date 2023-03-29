@@ -9,6 +9,14 @@ add_action('init', 'js_custom_init', 1);
 function js_custom_init() {
     $post_types = array(
         array(
+            'post_type' => 'race',
+            'menu_name' => 'Race Series',
+            'plural'    => 'Races',
+            'single'    => 'Race',
+            'menu_icon' => 'dashicons-location-alt',
+            'supports'  => array('title','editor')
+        ),
+        array(
             'post_type' => 'employeestories',
             'menu_name' => 'Employee Stories',
             'plural'    => 'Employee Stories',
@@ -22,6 +30,30 @@ function js_custom_init() {
             'plural'    => 'Jobs',
             'single'    => 'Job',
             'menu_icon' => 'dashicons-index-card',
+            'supports'  => array('title','editor')
+        ),
+        array(
+            'post_type' => 'fieldtrips',
+            'menu_name' => 'Field Trips',
+            'plural'    => 'Field Trips',
+            'single'    => 'Field Trip',
+            'menu_icon' => 'dashicons-car',
+            'supports'  => array('title','editor')
+        ),
+        array(
+            'post_type' => 'instructions',
+            'menu_name' => 'Instructions',
+            'plural'    => 'Instructions',
+            'single'    => 'Instruction',
+            'menu_icon' => 'dashicons-book-alt',
+            'supports'  => array('title','editor')
+        ),
+        array(
+            'post_type' => 'teamdev',
+            'menu_name' => 'Team Developement',
+            'plural'    => 'Team Developement',
+            'single'    => 'Team Developement',
+            'menu_icon' => 'dashicons-groups',
             'supports'  => array('title','editor')
         ),
         // array(
@@ -111,12 +143,21 @@ function build_taxonomies() {
       'taxonomy'  => 'event-location'
     ),
     array(
-      'post_type' => array('film', 'activity','post'),
+      'post_type' => array('film', 'activity','post', 'race'),
       'menu_name' => 'Activity',
       'plural'    => 'Activities',
       'single'    => 'Activity',
       'taxonomy'  => 'activity_type',
       'rewrite'   => 'activity-type',
+      'query_var' => true
+    ),
+    array(
+      'post_type' => array('race'),
+      'menu_name' => 'Location',
+      'plural'    => 'Locations',
+      'single'    => 'Location',
+      'taxonomy'  => 'activity_location',
+      'rewrite'   => 'activity-location',
       'query_var' => true
     ),
     array(
