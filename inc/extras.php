@@ -66,12 +66,20 @@ function add_race_to_api( $args, $post_type ) {
 add_filter( 'register_post_type_args', 'add_race_to_api', 10, 2 );
 
 function add_activity_type_to_api( $args, $taxonomy ) {
-    if ( 'activity' === $taxonomy ) {
+    if ( 'activity_type' === $taxonomy ) {
         $args['show_in_rest'] = true;
     }
     return $args;
 }
 add_filter( 'register_taxonomy_args', 'add_activity_type_to_api', 10, 2 );
+
+function add_activity_location_to_api( $args, $taxonomy ) {
+    if ( 'activity_location' === $taxonomy ) {
+        $args['show_in_rest'] = true;
+    }
+    return $args;
+}
+add_filter( 'register_taxonomy_args', 'add_activity_location_to_api', 10, 2 );
 
 
 function get_images_dir($fileName=null) {

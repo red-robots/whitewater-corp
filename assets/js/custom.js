@@ -1,6 +1,6 @@
 "use strict";
 
-function _typeof2(obj) { "@babel/helpers - typeof"; return _typeof2 = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof2(obj); }
+function _typeof2(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -310,6 +310,45 @@ jQuery(document).ready(function ($) {
       }
     }
   });
+  /*
+  
+  	Dropdowns for Isotope on Rest Api Race Pages
+  
+  */
+
+  $(".fs-rest .fs-label-wrap").on("click", function (e) {
+    e.preventDefault();
+    $(this).toggleClass("fs-open"); // $(".corpnav").addClass("open");
+    //$(".corpnav").addClass("open");
+    // $("li.corplink").addClass('active');
+
+    $(this).next('.fs-dropdown').toggleClass('fs-hidden');
+  }); // init Isotope For the Rest API Race Pages
+
+  var $container = $('#rest-isotope').isotope({
+    itemSelector: '.item'
+  }); // var $output = $('#output');
+  // filter with selects and checkboxes
+
+  var $checkboxes = $('#form-ui input');
+  $checkboxes.change(function () {
+    // map input values to an array
+    var inclusives = []; // inclusive filters from checkboxes
+
+    $checkboxes.each(function (i, elem) {
+      // if checkbox, use value if checked
+      if (elem.checked) {
+        inclusives.push(elem.value);
+      }
+    }); // combine inclusive filters
+
+    var filterValue = inclusives.length ? inclusives.join(', ') : '*'; // $output.text( filterValue );
+
+    $container.isotope({
+      filter: filterValue
+    });
+  }); // End Isotope For the Rest API Race Pages
+
   /* When clicking the link with data-nav='.default', children links go back to default */
 
   function resetDefaultNavs(selector) {

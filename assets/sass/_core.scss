@@ -14347,3 +14347,49 @@ input.nav-search {
 		}
 	}
 }
+/*
+
+Isotope dropdowns to mimic Facets.
+
+*/
+.fs-rest {
+	&.fs-wrap.multiple {
+		.fs-option {
+			float: left;
+			width: 100%;
+			padding: 0;
+		}
+	}
+	
+	label.chexbox {
+		background-color: rgba(#fff, 1);
+		width: 100%;
+		color: #000;
+		text-align: left;
+	}
+}
+.race-location {
+	width: 100%;
+	float: left;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+	.map {
+		width: 25px;
+		margin: 0 5px;
+		img {
+			width: 100%;
+		}
+	}
+	.location {
+		width: auto;
+		height: 25px;
+		line-height: 25px;
+		font-size: 18px;
+		margin: 0 5px;
+		padding-top: 2px;
+	}
+}

@@ -3518,6 +3518,12 @@ input.nav-search{width:100%;border:0;height:30px;border-radius:15px;background-c
 .prenav li.active a{background-color:rgba(255,255,255,0.2)}
 .prenav li.umbrella{text-indent:-9000px;background-image:url(images/nav-logo-2.png);background-position:center center;background-size:100px 15px;background-repeat:no-repeat}
 .prenav a{color:#fff;padding:8px 28px;text-decoration:none;font-size:16px;font-weight:bold;text-transform:uppercase;display:block}
+.fs-rest.fs-wrap.multiple .fs-option{float:left;width:100%;padding:0}
+.fs-rest label.chexbox{background-color:white;width:100%;color:#000;text-align:left}
+.race-location{width:100%;float:left;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:20px 0}
+.race-location .map{width:25px;margin:0 5px}
+.race-location .map img{width:100%}
+.race-location .location{width:auto;height:25px;line-height:25px;font-size:18px;margin:0 5px;padding-top:2px}
 @media screen and (max-device-width:1024px){.featured-events-section{background-color:#FFF}
 .featured-events-section .flexwrap{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 .featured-events-section .postbox{width:50%;float:left}
