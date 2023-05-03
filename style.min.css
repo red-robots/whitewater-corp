@@ -3900,6 +3900,9 @@ section.route-map .map-frame{height:60vh}
 .jobs-pop .popslide-cont{height:427px}
 }@media(min-width:1300px){.information-tabs-wrap .tabs-info ul a span.arrow:before,.information-tabs-wrap .tabs-info ul a span.arrow:after{top:15px}
 .archive-posts-wrap .entry{width:33.33%}
+}@media screen and (min-width:1500px){#rest-isotope .item.rest{min-height:970px}
+}@media screen and (min-width:1750px){#rest-isotope .item.rest{min-height:1000px}
+}@media screen and (min-width:2000px){#rest-isotope .item.rest{min-height:1100px}
 }@media screen and (max-width:1230px){.jobs.resetBtn{position:relative;right:12px;top:3px;float:left}
 }@media screen and (max-width:1070px){.navigation__children.open .childNavCloseBtn{display:block;-webkit-animation-name:fadeIn;animation-name:fadeIn}
 }@media screen and (max-width:1000px){.filter-wrapper.non-facetwp.options4 .select-wrap{max-width:50%}

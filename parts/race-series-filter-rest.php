@@ -30,6 +30,7 @@ function get_race_posts() {
     $race_post = array(
 		'title' => $post['title']['rendered'],
 		'pagelink' => $post['link'],
+		'locationname' => $post['acf']['eventlocation_text'],
 		'start' => $post['acf']['start_date'],
 		'end' => $post['acf']['end_date'],
 		'hidePostfromMainPage' => $post['acf']['hidePostfromMainPage'],
@@ -210,6 +211,7 @@ $i=1;
       				$p = $event['pID'];
 					$title = $event['title'];
 					$pagelink = $event['pagelink'];
+					$locationname = $event['locationname'];
 					$start = $event['start'];
 					$end = $event['end'];
 					$event_date = get_event_date_range($start, $end);
@@ -220,7 +222,7 @@ $i=1;
 					$aT = $event['terms'];
 							
 							?>
-							<div id="post-<?php echo $id?>" class="item postbox <?php echo ($thumbImage) ? 'has-image':'no-image' ?> <?php echo $eventStatus ?> <?php echo implode(" ", $aT); ?>" data-filter="">
+							<div id="post-<?php echo $id?>" class="item rest postbox <?php echo ($thumbImage) ? 'has-image':'no-image' ?> <?php echo $eventStatus ?> <?php echo implode(" ", $aT); ?>" data-filter="">
 								<div class="inside">
 									<?php if ($eventStatus=='completed') { ?>
 										<div class="event-completed"><span>Event Complete</span></div>
@@ -267,19 +269,7 @@ $i=1;
 													<img src="<?php bloginfo('template_url'); ?>/images/map.png">
 												</div>
 												<div class="location">
-													<?php 
-													$numL = count($event['eventlocation']);
-													// echo $numL;
-													foreach( $event['eventlocation'] as $key => $l ){
-														if( $key == $numL - 1 ) {
-															echo $l['label']; 
-														} else {
-															echo $l['label'] ." | "; 
-														}
-														
-													}
-													
-													?>
+													<?php echo $locationname; ?>
 												</div>
 											</div>
 											<div class="button">
