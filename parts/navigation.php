@@ -49,7 +49,7 @@ if($parents) { ?>
         
         if( $visibility == 'show' ) { ?>
           <li class="sitelinks <?php echo $className ?>">
-            <a href="javascript:void(0)" data-nav=".<?php echo $dataNav ?>" data-home="<?php echo $siteLink ?>"><?php echo $name ?></a>
+            <a href="#" data-nav=".<?php echo $dataNav ?>" data-home="<?php echo $siteLink ?>"><?php echo $name ?></a>
           </li>
         <?php }
         
