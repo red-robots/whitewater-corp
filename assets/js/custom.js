@@ -27,7 +27,24 @@ function _typeof(obj) {
 
 
 jQuery(document).ready(function ($) {
-  // $(document).on('click', 'li.sitelinks a', function () {
+  $('.loop').owlCarousel({
+    center: true,
+    items: 2,
+    nav: true,
+    loop: true,
+    margin: 15,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    responsive: {
+      600: {
+        items: 2
+      },
+      400: {
+        items: 1
+      }
+    }
+  }); // $(document).on('click', 'li.sitelinks a', function () {
   //       // console.log($(this));
   //       $('.active').removeClass('active');
   //       $(this).parent().addClass('active');
@@ -66,6 +83,7 @@ jQuery(document).ready(function ($) {
   // 	});
   // }
   // $("select#diff").on("change", vali);
+
   $("select#diff").change(function () {
     var diffResult = $(this).val();
     $('ul.items').find('li.show').removeClass('show');

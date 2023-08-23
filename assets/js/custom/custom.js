@@ -10,7 +10,24 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 jQuery(document).ready(function ($) {
 
-
+$('.loop').owlCarousel({
+    center: true,
+    items:2,
+    nav: true,
+    loop:true,
+    margin:15,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
+    responsive:{
+      600:{
+       	items:2
+      },
+      400:{
+       	items:1
+      }
+    }
+});
 
 // $(document).on('click', 'li.sitelinks a', function () {
 //       // console.log($(this));
