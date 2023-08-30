@@ -152,6 +152,7 @@ if ( $blogs->have_posts() ) {  $totalFound = $blogs->found_posts; ?>
 					$featImg = wp_get_attachment_image_src($thumbId,'large');
 					$featThumb = wp_get_attachment_image_src($thumbId,'thumbnail');
 					$content = get_the_content();
+					$the_excerpt = get_the_excerpt();
 					$title = get_the_title();
 					$divclass = (($content || $title) && $featImg) ? 'half':'full';
 					$pagelink = get_permalink();

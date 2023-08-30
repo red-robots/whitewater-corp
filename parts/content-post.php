@@ -42,7 +42,7 @@ $filmCat = 'yes';
 								<?php $postdate = get_the_date('M j, Y'); ?>
 								<div class="store-postdate"><span><?php echo $postdate ?></span></div>
 
-								<?php if ($content) { ?>
+								<?php if ($content || $the_excerpt) { ?>
 									<div class="text">
 										<?php //echo shortenText(strip_tags($content),200,' ','...'); ?>
 										<?php the_excerpt(); ?>		
