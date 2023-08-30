@@ -32,7 +32,9 @@ if( have_rows('the_story') ): ?>
 								<?php foreach ($new_galleries as $g) { ?>
 									<div class="item">
 										<div class="image" style="background-image:url('<?php echo $g['url']?>')">
+											<a href="<?php echo $g['url']?>" data-fancybox class="popup-image">
 											<img src="<?php echo $placeholder ?>" alt="" aria-hidden="true" />
+											</a>
 										</div>
 									</div>
 								<?php } ?>

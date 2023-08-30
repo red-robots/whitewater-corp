@@ -27,8 +27,9 @@ $filmCat = 'yes';
 							<?php } ?>
 						<div class="blurred" style="background-image:url('<?php echo $featThumb[0] ?>')"></div>
 						<div class="image fadeIn wow" data-wow-delay="<?php echo $sec;?>s" style="background-image:url('<?php echo $featImg[0] ?>')">
-
-							<img src="<?php echo $placeholder ?>" alt="" aria-hidden="true" class="helper">
+							<a href="<?php echo $pagelink ?>">
+								<img src="<?php echo $placeholder ?>" alt="" aria-hidden="true" class="helper">
+							</a>
 						</div>
 					</div>
 					<?php } ?>
