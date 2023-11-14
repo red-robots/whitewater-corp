@@ -17,7 +17,7 @@ $('.loop').owlCarousel({
     loop:true,
     margin:15,
     autoplay:true,
-    autoplayTimeout:3000,
+    autoplayTimeout:10000,
     autoplayHoverPause:true,
     responsive:{
       600:{
