@@ -33,7 +33,8 @@ jQuery(document).ready(function ($) {
     nav: true,
     loop: true,
     margin: 15,
-    autoplay: 2000,
+    autoplay: true,
+    smartSpeed: 1000,
     autoplayTimeout: 10000,
     autoplayHoverPause: true,
     responsive: {
