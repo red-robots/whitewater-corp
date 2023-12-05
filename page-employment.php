@@ -31,21 +31,7 @@ $defaultLocation = get_default_job_location();
 		<?php //get_template_part("parts/content-available-jobs") ?>
 
 
-		<?php
-			$title2 = get_field("title2");
-			$title2 = ($title2) ? $title2 : '';
-			$video_code = get_field("video_code");
-			$gallery1 = get_field("gallery1");
-			if( $video_code ) { ?>
-			<section id="section2" data-section="<?php echo $title2 ?>" class="section-content section-video">
-				<div class="wrapper narrow">
-					<div class="video-frame">
-						<?php echo $video_code ?>
-						<img src="<?php echo $blank_image ?>" alt="" aria-hidden="true" class="video-helper" />		
-					</div>
-				</div>
-			</section>
-			<?php } ?>
+		
 
 			<?php
 			$showHide = get_field("show_hide");
@@ -146,7 +132,21 @@ $defaultLocation = get_default_job_location();
 			endif;
 		?>
 
-
+		<?php
+			$title2 = get_field("title2");
+			$title2 = ($title2) ? $title2 : '';
+			$video_code = get_field("video_code");
+			$gallery1 = get_field("gallery1");
+			if( $video_code ) { ?>
+			<section id="section2" data-section="<?php echo $title2 ?>" class="section-content section-video">
+				<div class="wrapper narrow">
+					<div class="video-frame">
+						<?php echo $video_code ?>
+						<img src="<?php echo $blank_image ?>" alt="" aria-hidden="true" class="video-helper" />		
+					</div>
+				</div>
+			</section>
+			<?php } ?>
 
 		<?php
 			$icon1 = get_field("icon1");
