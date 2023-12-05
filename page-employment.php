@@ -30,53 +30,6 @@ $defaultLocation = get_default_job_location();
 		<?php get_template_part("parts/content-available-jobs-tiles") ?>
 		<?php //get_template_part("parts/content-available-jobs") ?>
 
-		<?php
-			$icon1 = get_field("icon1");
-			$title1 = get_field("title1");
-			$text1 = get_field("text1");
-			$gallery1 = get_field("gallery1");
-			$class1 = ( ($title1 || $text1) && $gallery1 ) ? 'half':'full';
-			if( ($title1 || $text1) || $gallery1 ) { ?>
-			<section id="section1" data-section="<?php echo $title1 ?>" class="text-and-gallery <?php echo $class1 ?>">
-				<div class="mscol <?php echo $class1 ?>">
-					
-					<?php if ($title1 || $text1) { ?>
-					<div class="textcol">
-						<div class="inside">
-							<div class="info">
-								<?php if ($icon1) { ?>
-								<div class="icondiv"><span style="background-image:url('<?php echo $icon1['url'];?>')"></span></div>	
-								<?php } ?>
-								<?php if ($title1) { ?>
-								<h3 class="mstitle"><?php echo $title1 ?></h3>	
-								<?php } ?>
-								<?php if ($text1) { ?>
-								<div class="textwrap"><?php echo $text1 ?></div>	
-								<?php } ?>
-							</div>
-						</div>
-					</div>
-					<?php } ?>
-
-					<?php if ($gallery1) { ?>
-					<div class="gallerycol">
-						<div class="flexslider">
-							<ul class="slides">
-								<?php $helper = THEMEURI . 'images/rectangle-narrow.png'; ?>
-								<?php foreach ($gallery1 as $s) { ?>
-									<li class="slide-item" style="background-image:url('<?php echo $s['url']?>')">
-										<img src="<?php echo $helper ?>" alt="" aria-hidden="true" class="placeholder">
-										<img src="<?php echo $s['url'] ?>" alt="<?php echo $s['title'] ?>" class="actual-image" />
-									</li>
-								<?php } ?>
-							</ul>
-						</div>
-					</div>	
-					<?php } ?>
-
-				</div>
-			</section>
-			<?php } ?>
 
 		<?php
 			$title2 = get_field("title2");
@@ -191,7 +144,59 @@ $defaultLocation = get_default_job_location();
 			</section>
 			<?php } 
 			endif;
-			?>
+		?>
+
+
+
+		<?php
+			$icon1 = get_field("icon1");
+			$title1 = get_field("title1");
+			$text1 = get_field("text1");
+			$gallery1 = get_field("gallery1");
+			$class1 = ( ($title1 || $text1) && $gallery1 ) ? 'half':'full';
+			if( ($title1 || $text1) || $gallery1 ) { ?>
+			<section id="section1" data-section="<?php echo $title1 ?>" class="text-and-gallery <?php echo $class1 ?>">
+				<div class="mscol <?php echo $class1 ?>">
+					
+					<?php if ($title1 || $text1) { ?>
+					<div class="textcol">
+						<div class="inside">
+							<div class="info">
+								<?php if ($icon1) { ?>
+								<div class="icondiv"><span style="background-image:url('<?php echo $icon1['url'];?>')"></span></div>	
+								<?php } ?>
+								<?php if ($title1) { ?>
+								<h3 class="mstitle"><?php echo $title1 ?></h3>	
+								<?php } ?>
+								<?php if ($text1) { ?>
+								<div class="textwrap"><?php echo $text1 ?></div>	
+								<?php } ?>
+							</div>
+						</div>
+					</div>
+					<?php } ?>
+
+					<?php if ($gallery1) { ?>
+					<div class="gallerycol">
+						<div class="flexslider">
+							<ul class="slides">
+								<?php $helper = THEMEURI . 'images/rectangle-narrow.png'; ?>
+								<?php foreach ($gallery1 as $s) { ?>
+									<li class="slide-item" style="background-image:url('<?php echo $s['url']?>')">
+										<img src="<?php echo $helper ?>" alt="" aria-hidden="true" class="placeholder">
+										<img src="<?php echo $s['url'] ?>" alt="<?php echo $s['title'] ?>" class="actual-image" />
+									</li>
+								<?php } ?>
+							</ul>
+						</div>
+					</div>	
+					<?php } ?>
+
+				</div>
+			</section>
+			<?php } ?>
+
+		
 
 
 		<?php //get_template_part("parts/content-employee-stories") ?>
