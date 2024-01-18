@@ -48,10 +48,10 @@
                       // echo '</pre>';
                       $websiteUrl = get_field('image_website', $ci['ID']);
                       ?>
-                      <div class="cicon">
+                      <div class="cicon" style="mix-blend-mode: color-burn; color: #fff;">
                         <?php if( $websiteUrl ) { echo '<a href="'.$websiteUrl.'">'; } ?>
-                          <img src="<?php echo $ci['url'] ?>">
-                          <?php if( $ci['title'] ) { echo '<h3>'.$ci['title'].'</h3>';} ?>
+                          <img src="<?php echo $ci['url'] ?>" style="filter: grayscale(1) invert(1);">
+                          <?php if( $ci['title'] ) { echo '<h3 style="color: #fff !important;">'.$ci['title'].'</h3>';} ?>
                         <?php if( $websiteUrl ) { echo '</a>'; } ?>
                       </div>
                     <?php } ?>

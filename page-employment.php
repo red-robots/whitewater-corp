@@ -264,6 +264,7 @@ jQuery(document).ready(function($){
 	
 });
 </script>
+<!-- employment template -->
 <?php
-include( locate_template('inc/pagetabs-script.php') );
+//include( locate_template('inc/pagetabs-script.php') );
 get_footer();
