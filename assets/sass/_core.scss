@@ -7843,6 +7843,7 @@ body.pageNoBanner {
 
 #carousel-images {
 	position: relative;
+	margin: 80px 0;
 	.owl-carousel {
 		position: relative;
 	}
@@ -14518,5 +14519,10 @@ Isotope dropdowns to mimic Facets.
 				background: $gray_dark;
 			}
 		}
+	}
+}
+body.single-post {
+	.main-post-text .textcol .inside {
+		font-size: 19px;
 	}
 }
