@@ -3579,6 +3579,16 @@ input.nav-search{width:100%;border:0;height:30px;border-radius:15px;background-c
 #carousel-images .owl-dots .owl-dot{display:inline-block;-webkit-appearance:none;border-radius:100px;border:1px solid #707070;-webkit-box-shadow:none;box-shadow:none;text-shadow:none;width:10px;height:10px;margin:6px}
 #carousel-images .owl-dots .owl-dot.active{background:#707070}
 body.single-post .main-post-text .textcol .inside{font-size:19px}
+.teaser-form{width:100%;float:left;padding:60px 0;text-align:center;color:#ba0d30}
+#gform_wrapper_14 form{width:100%;position:relative}
+#gform_wrapper_14 label{display:none}
+#gform_wrapper_14 .gform-body{width:100%;position:relative;z-index:10}
+#gform_wrapper_14 .gform_footer{width:50px;height:100%;position:absolute;top:0;right:0;z-index:20;margin:0;padding:0}
+#gform_wrapper_14 .gform_footer input{margin:0;padding:0;height:100%;background-color:transparent;text-indent:-999em;border:0;width:50px}
+.gform_14{width:auto;position:relative}
+.subscribeForm{width:290px;margin:0 auto;overflow:hidden;position:relative}
+.subscribeForm #subscribeBtnIcon{width:50px;height:100%;position:absolute;top:0;right:0;z-index:15}
+.subscribeForm #subscribeBtnIcon svg{width:50px;height:25px;margin-top:8px;color:#ba0d30}
 @media screen and (max-device-width:1024px){.featured-events-section{background-color:#FFF}
 .featured-events-section .flexwrap{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
 .featured-events-section .postbox{width:50%;float:left}

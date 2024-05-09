@@ -31,7 +31,30 @@ $defaultLocation = get_default_job_location();
 		<?php //get_template_part("parts/content-available-jobs") ?>
 
 
-		
+		<section class="section-title ">
+	
+			
+			<h2><?php echo $mc_title; ?></h2>
+			
+			<div class="description"><?php echo $mc_desc; ?></div>
+			
+			<div class="teaser-form">
+				<h2>Sign up for employment updates from Whitewater.</h2>
+				<div class="subscribeForm">
+					<div id="footSubscribeForm" class="subscribeForm">
+
+						<!-- Begin MailChimp Signup Form -->
+						<div id="mc_embed_signup">
+						<?php echo do_shortcode('[gravityform id="14" title="false" description="false"]'); ?>
+						</div>
+						
+						<!--End mc_embed_signup-->
+						<div id="subscribeBtnIcon"><i class="subicon fas fa-paper-plane"></i></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 
 			<?php
 			$showHide = get_field("show_hide");

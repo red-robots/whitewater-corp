@@ -14526,3 +14526,68 @@ body.single-post {
 		font-size: 19px;
 	}
 }
+.teaser-form {
+	width: 100%;
+	float: left;
+	padding: 60px 0;
+	text-align: center;
+	color: $red;
+}
+#gform_wrapper_14 {
+	form {
+		width: 100%;
+		position: relative;
+	}
+	label {
+		display: none;
+	}
+	.gform-body {
+		width: 100%;
+		position: relative;
+		z-index: 10;
+	}
+	.gform_footer {
+		width: 50px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 20;
+		margin: 0;
+		padding: 0;
+		input {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background-color: transparent;
+			text-indent: -999em;
+			border: 0;
+			width: 50px;
+		}
+	}
+}
+.gform_14 {
+	width: auto;
+	position: relative;
+
+}
+.subscribeForm {
+	width: 290px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	#subscribeBtnIcon {
+		width: 50px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 15;
+		svg {
+			width: 50px;
+			height: 25px;
+			margin-top: 8px;
+			color: $red;
+		}
+	}
+}
